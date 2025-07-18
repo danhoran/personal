@@ -3,6 +3,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import '../styles/global.css';
 ---
 
 <!doctype html>
@@ -12,8 +13,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
   </head>
   <body>
     <Header />
-    <main>
-      <h1>Developer.<br />Engineering Leader.</h1>
+    <main class="mx-15">
+      <h1 class="font-medium mb-15 text-9xl leading-34">
+        Developer.<br />Engineering Leader.
+      </h1>
+      <hr class="mb-15" />
       <p>
         I build high-performing teams and scalable systems with a hands-on,
         people-first approach.
@@ -24,7 +28,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
         code, thoughtful leadership, and creating products that make a
         difference.
       </p>
+      <Footer />
     </main>
-    <Footer />
   </body>
 </html>
