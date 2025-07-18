@@ -1,7 +1,6 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import '../styles/global.css';
 ---
@@ -11,24 +10,21 @@ import '../styles/global.css';
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body>
+  <body class="flex flex-col min-h-screen">
     <Header />
-    <main class="mx-15">
-      <h1 class="font-medium mb-15 text-9xl leading-34">
-        Developer.<br />Engineering Leader.
+    <main class="mx-15 my-20 mt-auto">
+      <h1
+        class="font-medium mb-[clamp(2rem,5vw,4rem)] leading-none text-[clamp(4rem,16vw,6.6rem)]"
+      >
+        Developer.<br /><span class="hidden lg:inline"
+          >Engineering
+        </span>Leader.
       </h1>
-      <hr class="mb-15" />
-      <p>
-        I build high-performing teams and scalable systems with a hands-on,
-        people-first approach.
+      <hr class="mb-[clamp(2rem,5vw,4rem)]" />
+      <p class="text-xl">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec
+        dolor at risus lacinia suscipit.
       </p>
-      <p>
-        I’m a software engineer turned engineering leader with a passion for
-        building scalable systems and high-performing teams. I care about clean
-        code, thoughtful leadership, and creating products that make a
-        difference.
-      </p>
-      <Footer />
     </main>
   </body>
 </html>

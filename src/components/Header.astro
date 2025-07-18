@@ -3,10 +3,12 @@ import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE, HEADER_TITLE } from '../consts';
 ---
 
-<header class="mx-15">
-  <nav>
-    <h2 class="font-medium text-2xl"><a href="/">{HEADER_TITLE}</a></h2>
-    <div class="internal-links">
+<header class="mx-15 my-5">
+  <nav class="flex">
+    <h2 class="font-medium text-[clamp(1.5rem,4vw,2rem)]">
+      <a href="/">{HEADER_TITLE}</a>
+    </h2>
+    <div class="ml-auto">
       <HeaderLink href="/collections">Collections</HeaderLink>
       <HeaderLink href="/thoughts">Thoughts</HeaderLink>
       <HeaderLink href="/about">About</HeaderLink>
