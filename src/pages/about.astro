@@ -1,6 +1,7 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
+import Role from '../components/Role.astro';
 import Project from '../components/Project.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import '../styles/global.css';
@@ -27,7 +28,7 @@ import '../styles/global.css';
           <h2 class="text-2xl font-bold mb-9">
             Hi, I'm Dan. Developer, team builder, and curious problem solver.
           </h2>
-          <p class="text-lg text-gray-500">
+          <p class="text-lg text-gray-500 mb-10">
             With 15 years of experience in software engineering and leadership,
             I’ve worked across teams, tech stacks, and time zones to build
             scalable systems and high-performing engineering cultures. I’m
@@ -37,64 +38,100 @@ import '../styles/global.css';
             product strategy, I bring curiosity, clarity, and a strong belief in
             doing the right thing, even when it’s hard.
           </p>
+          <p class="italic text-lg mb-3">
+            "My leader throughout much change. The best people manager I have
+            worked with bar none. A talented man with a heart of gold.
+            Technically talented and full of wisdom. Destined for the top."
+          </p>
+          <small class="text-gray-500 flex items-center">
+            Oliver Beck - Head of Engineering, Zalando
+            <a
+              href="https://www.linkedin.com/posts/oliver-beck-649042117_finally-paying-homage-to-this-amazing-business-activity-7269811082158882817-Pbug"
+              target="_blank"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                class="w-4 h-4 inline-block ml-1 mb-0.5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M8.914 6.025a.75.75 0 0 1 1.06 0 3.5 3.5 0 0 1 0 4.95l-2 2a3.5 3.5 0 0 1-5.396-4.402.75.75 0 0 1 1.251.827 2 2 0 0 0 3.085 2.514l2-2a2 2 0 0 0 0-2.828.75.75 0 0 1 0-1.06Z"
+                  clip-rule="evenodd"></path>
+                <path
+                  fill-rule="evenodd"
+                  d="M7.086 9.975a.75.75 0 0 1-1.06 0 3.5 3.5 0 0 1 0-4.95l2-2a3.5 3.5 0 0 1 5.396 4.402.75.75 0 0 1-1.251-.827 2 2 0 0 0-3.085-2.514l-2 2a2 2 0 0 0 0 2.828.75.75 0 0 1 0 1.06Z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </a>
+          </small>
         </div>
       </div>
       <hr class="mb-[clamp(2rem,5vw,4rem)] border-gray-300" />
       <div class="flex items-start justify-between mb-[clamp(2rem,5vw,4rem)]">
         <h3 class="flex-shrink-0 mr-8 text-xl">Roles</h3>
         <ul class="mb-0 flex-1 max-w-xl mr-50">
+          <Role
+            title="Engineering Director"
+            date="July 2020 - Present"
+            description="I lead engineering teams behind search, product discovery, retail media, and content at a global PaaS provider. I work closely with product to deliver secure, scalable, and high-performing platforms used by millions. I’ve led organisational change, defined strategic direction, scaled teams internationally, and developed engineering leadership across the business."
+          />
+          <Role
+            title="Senior Engineering Manager"
+            date="Dec 2017 - July 2020"
+            description="I led the teams building our next-generation e-commerce platform for retailers around the world. I drove team growth, revamped our hiring strategy, and expanded engineering capacity by 300%. I also oversaw application security, incident management, and established engineering principles that helped us achieve SOC2 and PCI compliance."
+          />
+          <Role
+            title="Engineering Manager"
+            date="Apr 2016 - Dec 2017"
+            description="I led a team of six engineers shaping the future of our e-commerce platform. I drove our migration to React and Node.js, established CI/CD pipelines, and championed Agile delivery. Beyond the code, I fostered cross-functional collaboration, mentored engineers in modern web development, and helped level up our department’s frontend expertise—while also keeping the team connected through events like Code in the Dark."
+          />
+          <Role
+            title="Senior Software Engineer"
+            date="Nov 2014 - Apr 2016"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis mi euismod, maximus risus id, condimentum sapien. Duis auctor in enim eu dignissim."
+          />
+          <Role
+            title="Software Engineer"
+            date="Aug 2008 - Nov 2014"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis mi euismod, maximus risus id, condimentum sapien. Duis auctor in enim eu dignissim."
+          />
+          <Role
+            title="Verification Engineer"
+            date="Apr 2007 - Jun 2008"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lobortis mi euismod, maximus risus id, condimentum sapien. Duis auctor in enim eu dignissim."
+          />
+        </ul>
+      </div>
+      <hr class="mb-[clamp(2rem,5vw,4rem)] border-gray-300" />
+      <div class="flex items-start justify-between mb-[clamp(2rem,5vw,4rem)]">
+        <h3 class="flex-shrink-0 mr-8 text-xl">Volunteering</h3>
+        <ul class="mb-0 flex-1 max-w-xl mr-50">
           <li class="mb-10">
-            <h4 class="text-lg">Engineering Director</h4>
-            <small class="block mb-5">July 2020 - Present</small>
+            <div class="flex items-center justify-between mb-2">
+              <h4 class="text-lg">Teaching Children to Code</h4>
+              <small class="text-gray-500 flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="w-4 h-4 inline-block mr-1"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                Welwyn Garden City, United Kingdom
+              </small>
+            </div>
             <p class="text-gray-500">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-              lobortis mi euismod, maximus risus id, condimentum sapien. Duis
-              auctor in enim eu dignissim.
-            </p>
-          </li>
-          <li class="mb-10">
-            <h4 class="text-lg">Senior Engineering Manager</h4>
-            <small class="block mb-5">Dec 2017 - July 2020</small>
-            <p class="text-gray-500">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-              lobortis mi euismod, maximus risus id, condimentum sapien. Duis
-              auctor in enim eu dignissim.
-            </p>
-          </li>
-          <li class="mb-10">
-            <h4 class="text-lg">Engineering Manager</h4>
-            <small class="block mb-5">Apr 2016 - Dec 2017</small>
-            <p class="text-gray-500">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-              lobortis mi euismod, maximus risus id, condimentum sapien. Duis
-              auctor in enim eu dignissim.
-            </p>
-          </li>
-          <li class="mb-10">
-            <h4 class="text-lg">Senior Software Engineer</h4>
-            <small class="block mb-5">Nov 2014 - Apr 2016</small>
-            <p class="text-gray-500">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-              lobortis mi euismod, maximus risus id, condimentum sapien. Duis
-              auctor in enim eu dignissim.
-            </p>
-          </li>
-          <li class="mb-10">
-            <h4 class="text-lg">Software Engineer</h4>
-            <small class="block mb-5">Aug 2008 - Nov 2014</small>
-            <p class="text-gray-500">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-              lobortis mi euismod, maximus risus id, condimentum sapien. Duis
-              auctor in enim eu dignissim.
-            </p>
-          </li>
-          <li class="mb-10">
-            <h4 class="text-lg">Verification Engineer</h4>
-            <small class="block mb-5">Apr 2007 - Jun 2008</small>
-            <p class="text-gray-500">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-              lobortis mi euismod, maximus risus id, condimentum sapien. Duis
-              auctor in enim eu dignissim.
+              Volunteering at a local primary school, where I introduced
+              children to the basics of coding through fun, hands-on activities.
+              Using simple programming tools like Scratch, I helped students
+              build confidence in problem-solving, creativity, and logical
+              thinking.
             </p>
           </li>
         </ul>
