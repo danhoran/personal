@@ -1,63 +1,173 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
-import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Project from '../components/Project.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import '../styles/global.css';
 ---
 
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage={AboutHeroImage}
->
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
-
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
-
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
-
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
-
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
-</Layout>
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <Header />
+    <main class="font-sans mx-15 my-20 mt-auto">
+      <div class="flex items-center gap-8 mb-10">
+        <div>
+          <h1 class="mt-20 mb-40 text-xl">About me</h1>
+          <img
+            src="https://placehold.co/100x100"
+            alt="Dan Horan"
+            class="w-24 h-24 rounded-md mr-100"
+          />
+        </div>
+        <div class="mt-40 mr-50 max-w-xl">
+          <h2 class="text-2xl font-bold mb-9">
+            Hi, I'm Dan. Developer, team builder, and curious problem solver.
+          </h2>
+          <p class="text-lg text-gray-500">
+            With 15 years of experience in software engineering and leadership,
+            I’ve worked across teams, tech stacks, and time zones to build
+            scalable systems and high-performing engineering cultures. I’m
+            passionate about observability, performance, and cloud
+            architecture—and I care just as much about how people feel as how
+            things work. Whether I’m leading a team, writing code, or shaping
+            product strategy, I bring curiosity, clarity, and a strong belief in
+            doing the right thing, even when it’s hard.
+          </p>
+        </div>
+      </div>
+      <hr class="mb-[clamp(2rem,5vw,4rem)] border-gray-300" />
+      <div class="flex items-start justify-between mb-[clamp(2rem,5vw,4rem)]">
+        <h3 class="flex-shrink-0 mr-8 text-xl">Roles</h3>
+        <ul class="mb-0 flex-1 max-w-xl mr-50">
+          <li class="mb-10">
+            <h4 class="text-lg">Engineering Director</h4>
+            <small class="block mb-5">July 2020 - Present</small>
+            <p class="text-gray-500">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+              lobortis mi euismod, maximus risus id, condimentum sapien. Duis
+              auctor in enim eu dignissim.
+            </p>
+          </li>
+          <li class="mb-10">
+            <h4 class="text-lg">Senior Engineering Manager</h4>
+            <small class="block mb-5">Dec 2017 - July 2020</small>
+            <p class="text-gray-500">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+              lobortis mi euismod, maximus risus id, condimentum sapien. Duis
+              auctor in enim eu dignissim.
+            </p>
+          </li>
+          <li class="mb-10">
+            <h4 class="text-lg">Engineering Manager</h4>
+            <small class="block mb-5">Apr 2016 - Dec 2017</small>
+            <p class="text-gray-500">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+              lobortis mi euismod, maximus risus id, condimentum sapien. Duis
+              auctor in enim eu dignissim.
+            </p>
+          </li>
+          <li class="mb-10">
+            <h4 class="text-lg">Senior Software Engineer</h4>
+            <small class="block mb-5">Nov 2014 - Apr 2016</small>
+            <p class="text-gray-500">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+              lobortis mi euismod, maximus risus id, condimentum sapien. Duis
+              auctor in enim eu dignissim.
+            </p>
+          </li>
+          <li class="mb-10">
+            <h4 class="text-lg">Software Engineer</h4>
+            <small class="block mb-5">Aug 2008 - Nov 2014</small>
+            <p class="text-gray-500">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+              lobortis mi euismod, maximus risus id, condimentum sapien. Duis
+              auctor in enim eu dignissim.
+            </p>
+          </li>
+          <li class="mb-10">
+            <h4 class="text-lg">Verification Engineer</h4>
+            <small class="block mb-5">Apr 2007 - Jun 2008</small>
+            <p class="text-gray-500">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+              lobortis mi euismod, maximus risus id, condimentum sapien. Duis
+              auctor in enim eu dignissim.
+            </p>
+          </li>
+        </ul>
+      </div>
+      <hr class="mb-[clamp(2rem,5vw,4rem)] border-gray-300" />
+      <div class="flex items-start justify-between mb-[clamp(2rem,5vw,4rem)]">
+        <h3 class="flex-shrink-0 mr-8 text-xl">Projects</h3>
+        <ul class="mb-0 flex-1 max-w-xl mr-50">
+          <Project
+            name="Ocado"
+            location="Hatfield, United Kingdom"
+            description="Ocado is the UKs largest pure-play online grocer, known for its cutting-edge automation and nationwide delivery from high-tech fulfilment centres."
+          />
+          <Project
+            name="Morrisons"
+            location="Bradford, United Kingdom"
+            description="Morrisons is one of the UK’s biggest supermarket chains, owning much of its food supply chain—from farm to shelf."
+          />
+          <Project
+            name="ICA Gruppen"
+            location="Solna, Sweden"
+            description="ICA Gruppen is one of Sweden’s largest retail companies, operating thousands of grocery stores and pharmacies, uniquely combining local ownership with national scale."
+          />
+          <Project
+            name="Lotte"
+            location="Seoul, South Korea"
+            description="Lotte is one of South Korea’s largest conglomerates, spanning retail, food, and entertainment, and is uniquely known for blending consumer lifestyle brands with sprawling urban developments."
+          />
+          <Project
+            name="Groupe Casino"
+            location="Saint-Étienne, France"
+            description="Groupe Casino is a major French retail group, operating diverse supermarket brands and pioneering data-driven retail through its tech-driven subsidiary, Cdiscount."
+          />
+          <Project
+            name="Sobeys"
+            location="Stellarton, Canada"
+            description="Sobeys is one of Canada’s largest food retailers, known for its coast-to-coast presence and unique family-owned heritage within the Empire Company group."
+          />
+          <Project
+            name="Bon Preu"
+            location="Barcelona, Spain"
+            description="Bon Preu is a leading Catalan supermarket chain in Spain, uniquely focused on local products and sustainability across its growing network of stores."
+          />
+          <Project
+            name="Alcampo"
+            location="Madrid, Spain"
+            description="Alcampo is one of Spain’s major hypermarket chains, combining large-format retail with a strong commitment to affordable quality and French-rooted ownership through Auchan."
+          />
+          <Project
+            name="Aeon"
+            location="Chiba, Japan"
+            description="Aeon is Japan’s largest retail group, operating thousands of stores and uniquely integrating shopping, finance, and community services under one corporate umbrella."
+          />
+          <Project
+            name="Panda Retail Company"
+            location="Jeddah, Saudi Arabia"
+            description="Panda Retail Company is one of Saudi Arabia’s largest grocery chains, uniquely blending modern retail formats with deep local market reach across the Kingdom."
+          />
+          <Project
+            name="Telenor"
+            location="Fornebu, Norway"
+            description="Telenor is Norway’s largest telecom provider, operating across the Nordics and Asia, and uniquely known for its global reach combined with strong local trust."
+          />
+        </ul>
+      </div>
+      <hr class="mb-[clamp(2rem,5vw,4rem)] border-gray-300" />
+      <h3>Socials</h3>
+      <ul>
+        <li>
+          <a href="">Github</a>
+          <a href="">Linkedin</a>
+        </li>
+      </ul>
+    </main>
+  </body>
+</html>
