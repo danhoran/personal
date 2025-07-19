@@ -3,7 +3,7 @@ import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE, HEADER_TITLE } from '../consts';
 ---
 
-<header class="mx-15 my-5">
+<header class="mx-5 md:mx-15 my-5">
   <nav class="flex">
     <h2 class="text-[clamp(1.8rem,4vw,1.8rem)]">
       <a href="/">{HEADER_TITLE}</a>
@@ -27,18 +27,18 @@ import { SITE_TITLE, HEADER_TITLE } from '../consts';
         <!--
         <HeaderLink
           href="/collections"
-          class="text-gray-700 text-lg hover:text-blue-600 transition-colors font-semibold px-2 py-1 rounded-md"
+          class="text-gray-700 text-lg hover:text-blue-600 transition-colors px-2 py-1 rounded-md"
           >Apps</HeaderLink
         >
         <HeaderLink
           href="/thoughts"
-          class="text-gray-700 text-lg hover:text-blue-600 transition-colors font-semibold px-2 py-1 rounded-md"
+          class="text-gray-700 text-lg hover:text-blue-600 transition-colors px-2 py-1 rounded-md"
           >Writing</HeaderLink
         >
            -->
         <HeaderLink
           href="/about"
-          class="text-gray-700 text-lg hover:text-blue-600 transition-colors font-semibold px-2 py-1 rounded-md"
+          class="text-gray-700 text-lg hover:text-blue-600 transition-colors px-2 py-1 rounded-md"
           >About</HeaderLink
         >
       </div>
@@ -76,24 +76,24 @@ import { SITE_TITLE, HEADER_TITLE } from '../consts';
       <nav class="flex flex-col items-center gap-8 mt-24">
         <HeaderLink
           href="/"
-          class="text-gray-700 text-2xl hover:text-blue-600 transition-colors font-semibold px-2 py-1 rounded-md"
+          class="text-gray-700 text-2xl hover:text-blue-600 transition-colors px-2 py-1 rounded-md"
           >Home</HeaderLink
         >
         <!--
         <HeaderLink
           href="/collections"
-          class="text-gray-700 text-2xl hover:text-blue-600 transition-colors font-semibold px-2 py-1 rounded-md"
+          class="text-gray-700 text-2xl hover:text-blue-600 transition-colors px-2 py-1 rounded-md"
           >Apps</HeaderLink
         >
         <HeaderLink
           href="/thoughts"
-          class="text-gray-700 text-2xl hover:text-blue-600 transition-colors font-semibold px-2 py-1 rounded-md"
+          class="text-gray-700 text-2xl hover:text-blue-600 transition-colors px-2 py-1 rounded-md"
           >Writing</HeaderLink
         >
       -->
         <HeaderLink
           href="/about"
-          class="text-gray-700 text-2xl hover:text-blue-600 transition-colors font-semibold px-2 py-1 rounded-md"
+          class="text-gray-700 text-2xl hover:text-blue-600 transition-colors px-2 py-1 rounded-md"
           >About</HeaderLink
         >
       </nav>
