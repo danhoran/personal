@@ -1,13 +1,20 @@
 ---
-const { name, location, description } = Astro.props;
+const { icon, name, subheading, location, description } = Astro.props;
 ---
 
 <li class="mb-10">
-  <img
-    src="https://placehold.co/60x60"
-    alt=""
-    class="flex-shrink-0 rounded-md mb-3"
-  />
+  {
+    icon ? (
+      <img
+        src="https://placehold.co/60x60"
+        alt=""
+        class="flex-shrink-0 rounded-md mb-3"
+      />
+    ) : (
+      ''
+    )
+  }
+
   <div>
     <div class="flex items-center justify-between mb-2">
       <h4 class="text-lg font-semibold">{name}</h4>
@@ -26,6 +33,7 @@ const { name, location, description } = Astro.props;
         {location}
       </small>
     </div>
+    {subheading ? <small>{subheading}</small> : ''}
     <p class="text-gray-500">{description}</p>
   </div>
 </li>
