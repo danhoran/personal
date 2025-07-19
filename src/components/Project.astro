@@ -2,7 +2,7 @@
 const { icon, name, subheading, location, description } = Astro.props;
 ---
 
-<li class="mb-10">
+<li class="mb-10 last:mb-0">
   {
     icon ? (
       <img
@@ -16,9 +16,9 @@ const { icon, name, subheading, location, description } = Astro.props;
   }
 
   <div>
-    <div class="flex items-center justify-between mb-2">
+    <div class="sm:flex sm:items-center sm:justify-between mb-2">
       <h4 class="text-lg font-semibold">{name}</h4>
-      <small class="text-gray-500 flex items-center">
+      <small class="flex-full text-gray-500 flex items-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"

@@ -1,6 +1,7 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
+import Introduction from '../components/Introduction.astro';
 import Role from '../components/Role.astro';
 import Project from '../components/Project.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
@@ -15,63 +16,21 @@ import '../styles/global.css';
   <body class="flex flex-col min-h-screen">
     <Header />
     <main class="font-sans mx-15 my-20 mt-auto">
-      <div class="flex items-center gap-8 mb-10">
-        <div>
-          <h1 class="mt-20 mb-40 text-xl">About me</h1>
-          <img
-            src="https://placehold.co/100x100"
-            alt="Dan Horan"
-            class="w-24 h-24 rounded-md mr-100"
-          />
+      <Introduction />
+      <hr
+        class="mt-[clamp(2rem,5vw,4rem)] mb-[clamp(2rem,5vw,4rem)] border-gray-300"
+      />
+      <div class="flex flex-col sm:flex-row gap-4">
+        <div
+          class="sm:flex sm:flex-col sm:justify-between sm:flex-[1] sm:max-w-[400px] sm:basis-[80px] sm:shrink-0"
+        >
+          <h3
+            class="underline sm:no-underline flex-shrink-0 mr-8 text-xl mb-10 sm:mb-0"
+          >
+            Roles
+          </h3>
         </div>
-        <div class="mt-40 mr-50 max-w-xl">
-          <h2 class="text-2xl font-bold mb-9">
-            Hi, I'm Dan. Developer, team builder, and curious problem solver.
-          </h2>
-          <p class="text-lg text-gray-500 mb-10">
-            With 15 years of experience in software engineering and leadership,
-            I’ve worked across teams, tech stacks, and time zones to build
-            scalable systems and high-performing engineering cultures. I’m
-            passionate about observability, performance, and cloud
-            architecture—and I care just as much about how people feel as how
-            things work. Whether I’m leading a team, writing code, or shaping
-            product strategy, I bring curiosity, clarity, and a strong belief in
-            doing the right thing, even when it’s hard.
-          </p>
-          <p class="italic text-lg mb-3">
-            "My leader throughout much change. The best people manager I have
-            worked with bar none. A talented man with a heart of gold.
-            Technically talented and full of wisdom. Destined for the top."
-          </p>
-          <small class="text-gray-500 flex items-center">
-            Oliver Beck - Head of Engineering, Zalando
-            <a
-              href="https://www.linkedin.com/posts/oliver-beck-649042117_finally-paying-homage-to-this-amazing-business-activity-7269811082158882817-Pbug"
-              target="_blank"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 16 16"
-                fill="currentColor"
-                class="w-4 h-4 inline-block ml-1 mb-0.5"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M8.914 6.025a.75.75 0 0 1 1.06 0 3.5 3.5 0 0 1 0 4.95l-2 2a3.5 3.5 0 0 1-5.396-4.402.75.75 0 0 1 1.251.827 2 2 0 0 0 3.085 2.514l2-2a2 2 0 0 0 0-2.828.75.75 0 0 1 0-1.06Z"
-                  clip-rule="evenodd"></path>
-                <path
-                  fill-rule="evenodd"
-                  d="M7.086 9.975a.75.75 0 0 1-1.06 0 3.5 3.5 0 0 1 0-4.95l2-2a3.5 3.5 0 0 1 5.396 4.402.75.75 0 0 1-1.251-.827 2 2 0 0 0-3.085-2.514l-2 2a2 2 0 0 0 0 2.828.75.75 0 0 1 0 1.06Z"
-                  clip-rule="evenodd"></path>
-              </svg>
-            </a>
-          </small>
-        </div>
-      </div>
-      <hr class="mb-[clamp(2rem,5vw,4rem)] border-gray-300" />
-      <div class="flex items-start justify-between mb-[clamp(2rem,5vw,4rem)]">
-        <h3 class="flex-shrink-0 mr-8 text-xl">Roles</h3>
-        <ul class="mb-0 flex-1 max-w-xl mr-50">
+        <ul class="sm:flex-[3] max-w-xl">
           <Role
             title="Engineering Director"
             date="July 2020 - Present"
@@ -104,10 +63,20 @@ import '../styles/global.css';
           />
         </ul>
       </div>
-      <hr class="mb-[clamp(2rem,5vw,4rem)] border-gray-300" />
-      <div class="flex items-start justify-between mb-[clamp(2rem,5vw,4rem)]">
-        <h3 class="flex-shrink-0 mr-8 text-xl">Volunteering</h3>
-        <ul class="mb-0 flex-1 max-w-xl mr-50">
+      <hr
+        class="mt-[clamp(2rem,5vw,4rem)] mb-[clamp(2rem,5vw,4rem)] border-gray-300"
+      />
+      <div class="flex flex-col sm:flex-row gap-4">
+        <div
+          class="sm:flex sm:flex-col sm:justify-between sm:flex-[1] sm:max-w-[400px] sm:basis-[80px] sm:shrink-0"
+        >
+          <h3
+            class="underline sm:no-underline flex-shrink-0 mr-8 text-xl mb-10 sm:mb-0"
+          >
+            Volunteering
+          </h3>
+        </div>
+        <ul class="sm:flex-[3] max-w-xl">
           <Project
             name="Teaching Children to Code"
             location="Welwyn Garden City, United Kingdom"
@@ -115,13 +84,23 @@ import '../styles/global.css';
           />
         </ul>
       </div>
-      <hr class="mb-[clamp(2rem,5vw,4rem)] border-gray-300" />
-      <div class="flex items-start justify-between mb-[clamp(2rem,5vw,4rem)]">
-        <h3 class="flex-shrink-0 mr-8 text-xl">Education</h3>
-        <ul class="mb-0 flex-1 max-w-xl mr-50">
-          <li class="mb-2">
+      <hr
+        class="mt-[clamp(2rem,5vw,4rem)] mb-[clamp(2rem,5vw,4rem)] border-gray-300"
+      />
+      <div class="flex flex-col sm:flex-row gap-4">
+        <div
+          class="sm:flex sm:flex-col sm:justify-between sm:flex-[1] sm:max-w-[400px] sm:basis-[80px] sm:shrink-0"
+        >
+          <h3
+            class="underline sm:no-underline flex-shrink-0 mr-8 text-xl mb-10 sm:mb-0"
+          >
+            Education
+          </h3>
+        </div>
+        <ul class="sm:flex-[3] max-w-xl">
+          <li class="mb-5 sm:mb-2">
             <div>
-              <div class="flex items-center justify-between">
+              <div class="sm:flex sm:items-center sm:justify-between">
                 <h4 class="text-lg font-semibold">
                   University of Bedfordshire
                 </h4>
@@ -142,9 +121,9 @@ import '../styles/global.css';
               </div>
             </div>
           </li>
-          <li class="mb-2">
+          <li class="mb-2 last:mb-0">
             <div>
-              <div class="flex items-center justify-between">
+              <div class="sm:flex sm:items-center sm:justify-between">
                 <h4 class="text-lg font-semibold">Barnfield College</h4>
                 <small class="text-gray-500 flex items-center">
                   <svg
@@ -165,81 +144,103 @@ import '../styles/global.css';
           </li>
         </ul>
       </div>
-      <hr class="mb-[clamp(2rem,5vw,4rem)] border-gray-300" />
-      <div class="flex items-start justify-between mb-[clamp(2rem,5vw,4rem)]">
-        <h3 class="flex-shrink-0 mr-8 text-xl">Projects</h3>
-        <ul class="mb-0 flex-1 max-w-xl mr-50">
+      <hr
+        class="mt-[clamp(2rem,5vw,4rem)] mb-[clamp(2rem,5vw,4rem)] border-gray-300"
+      />
+      <div class="flex flex-col sm:flex-row gap-4">
+        <div
+          sm:mb-0
+          class="m:flex sm:flex-col sm:justify-between sm:flex-[1] sm:max-w-[400px] sm:basis-[80px] sm:shrink-0"
+        >
+          <h3
+            class="underline sm:no-underline flex-shrink-0 mr-8 text-xl mb-10 sm:mb-0"
+          >
+            Developing for
+          </h3>
+        </div>
+        <ul class="sm:flex-[3] max-w-xl">
           <Project
             icon="https://placehold.co/60x60"
             name="Ocado"
             location="Hatfield, United Kingdom"
-            description="Ocado is the UKs largest pure-play online grocer, known for its cutting-edge automation and nationwide delivery from high-tech fulfilment centres."
-          />
-          <Project
-            icon="https://placehold.co/60x60"
-            name="Morrisons"
-            location="Bradford, United Kingdom"
-            description="Morrisons is one of the UK’s biggest supermarket chains, owning much of its food supply chain—from farm to shelf."
+            description="The UKs largest pure-play online grocer, known for its cutting-edge automation and nationwide delivery from high-tech fulfilment centres."
           />
           <Project
             icon="https://placehold.co/60x60"
             name="ICA Gruppen"
             location="Solna, Sweden"
-            description="ICA Gruppen is one of Sweden’s largest retail companies, operating thousands of grocery stores and pharmacies, uniquely combining local ownership with national scale."
-          />
-          <Project
-            icon="https://placehold.co/60x60"
-            name="Lotte"
-            location="Seoul, South Korea"
-            description="Lotte is one of South Korea’s largest conglomerates, spanning retail, food, and entertainment, and is uniquely known for blending consumer lifestyle brands with sprawling urban developments."
-          />
-          <Project
-            icon="https://placehold.co/60x60"
-            name="Groupe Casino"
-            location="Saint-Étienne, France"
-            description="Groupe Casino is a major French retail group, operating diverse supermarket brands and pioneering data-driven retail through its tech-driven subsidiary, Cdiscount."
-          />
-          <Project
-            icon="https://placehold.co/60x60"
-            name="Sobeys"
-            location="Stellarton, Canada"
-            description="Sobeys is one of Canada’s largest food retailers, known for its coast-to-coast presence and unique family-owned heritage within the Empire Company group."
-          />
-          <Project
-            name="Bon Preu"
-            location="Barcelona, Spain"
-            description="Bon Preu is a leading Catalan supermarket chain in Spain, uniquely focused on local products and sustainability across its growing network of stores."
-          />
-          <Project
-            icon="https://placehold.co/60x60"
-            name="Alcampo"
-            location="Madrid, Spain"
-            description="Alcampo is one of Spain’s major hypermarket chains, combining large-format retail with a strong commitment to affordable quality and French-rooted ownership through Auchan."
-          />
-          <Project
-            icon="https://placehold.co/60x60"
-            name="Aeon"
-            location="Chiba, Japan"
-            description="Aeon is Japan’s largest retail group, operating thousands of stores and uniquely integrating shopping, finance, and community services under one corporate umbrella."
-          />
-          <Project
-            icon="https://placehold.co/60x60"
-            name="Panda Retail Company"
-            location="Jeddah, Saudi Arabia"
-            description="Panda Retail Company is one of Saudi Arabia’s largest grocery chains, uniquely blending modern retail formats with deep local market reach across the Kingdom."
+            description="One of Sweden’s largest retail companies, operating thousands of grocery stores and pharmacies, uniquely combining local ownership with national scale."
           />
           <Project
             icon="https://placehold.co/60x60"
             name="Telenor"
             location="Fornebu, Norway"
-            description="Telenor is Norway’s largest telecom provider, operating across the Nordics and Asia, and uniquely known for its global reach combined with strong local trust."
+            description="Norway’s largest telecom provider, operating across the Nordics and Asia, and uniquely known for its global reach combined with strong local trust."
+          />
+          <Project
+            icon="https://placehold.co/60x60"
+            name="Morrisons"
+            location="Bradford, United Kingdom"
+            description="One of the UK’s biggest supermarket chains, owning much of its food supply chain—from farm to shelf."
+          />
+          <Project
+            icon="https://placehold.co/60x60"
+            name="Lotte"
+            location="Seoul, South Korea"
+            description="One of South Korea’s largest conglomerates, spanning retail, food, and entertainment, and is uniquely known for blending consumer lifestyle brands with sprawling urban developments."
+          />
+          <Project
+            icon="https://placehold.co/60x60"
+            name="Groupe Casino"
+            location="Saint-Étienne, France"
+            description="Major French retail group, operating diverse supermarket brands and pioneering data-driven retail through its tech-driven subsidiary, Cdiscount."
+          />
+          <Project
+            icon="https://placehold.co/60x60"
+            name="Sobeys"
+            location="Stellarton, Canada"
+            description="One of Canada’s largest food retailers, known for its coast-to-coast presence and unique family-owned heritage within the Empire Company group."
+          />
+          <Project
+            icon="https://placehold.co/60x60"
+            name="Bon Preu"
+            location="Barcelona, Spain"
+            description="A leading Catalan supermarket chain in Spain, uniquely focused on local products and sustainability across its growing network of stores."
+          />
+          <Project
+            icon="https://placehold.co/60x60"
+            name="Alcampo"
+            location="Madrid, Spain"
+            description="One of Spain’s major hypermarket chains, combining large-format retail with a strong commitment to affordable quality and French-rooted ownership through Auchan."
+          />
+          <Project
+            icon="https://placehold.co/60x60"
+            name="Aeon"
+            location="Chiba, Japan"
+            description="Japan’s largest retail group, operating thousands of stores and uniquely integrating shopping, finance, and community services under one corporate umbrella."
+          />
+          <Project
+            icon="https://placehold.co/60x60"
+            name="Panda Retail Company"
+            location="Jeddah, Saudi Arabia"
+            description="One of Saudi Arabia’s largest grocery chains, uniquely blending modern retail formats with deep local market reach across the Kingdom."
           />
         </ul>
       </div>
-      <hr class="mb-[clamp(2rem,5vw,4rem)] border-gray-300" />
-      <div class="flex items-start justify-between mb-[clamp(2rem,5vw,4rem)]">
-        <h3 class="flex-shrink-0 mr-8 text-xl">Socials</h3>
-        <ul class="mb-0 flex-1 max-w-xl mr-50">
+      <hr
+        class="mt-[clamp(2rem,5vw,4rem)] mb-[clamp(2rem,5vw,4rem)] border-gray-300"
+      />
+      <div class="flex flex-col sm:flex-row gap-4">
+        <div
+          class="sm:flex sm:flex-col sm:justify-between sm:flex-[1] sm:max-w-[400px] sm:basis-[80px] sm:shrink-0"
+        >
+          <h3
+            class="underline sm:no-underline flex-shrink-0 mr-8 text-xl mb-10 sm:mb-0"
+          >
+            Socials
+          </h3>
+        </div>
+        <ul class="sm:flex-[3] max-w-xl">
           <li class="mb-2">
             <div>
               <div>
