@@ -12,5 +12,5 @@ export default defineConfig({
 		plugins: [tailwind()],
 	},
 	output: 'static',
-	base: '/',
+	base: '/personal/',
 });
