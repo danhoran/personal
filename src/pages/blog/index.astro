@@ -48,9 +48,9 @@ const posts = (await getCollection('blog')).sort(
                 </div>
                 <p class="mt-3 text-gray-500">{posts[0].data.description}</p>
                 <span
-                  class="mt-5 ml-4 flex items-center justify-center w-23 h-6 rounded-full bg-white text-gray-500 ml-auto"
+                  class="mt-5 ml-4 flex items-center justify-center w-30 h-6 rounded-full bg-white text-gray-500 ml-auto"
                 >
-                  <small class="pl-2">Full post</small>
+                  <small class="pl-2">{posts[0].data.duration}</small>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -106,5 +106,6 @@ const posts = (await getCollection('blog')).sort(
         </div>
       </div>
     </main>
+    <Footer />
   </body>
 </html>

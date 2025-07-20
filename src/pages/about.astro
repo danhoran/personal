@@ -1,6 +1,7 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import Introduction from '../components/Introduction.astro';
 import Role from '../components/Role.astro';
 import Project from '../components/Project.astro';
@@ -270,7 +271,7 @@ import '../styles/global.css';
           <h3
             class="underline sm:no-underline flex-shrink-0 mr-8 text-xl mb-10 sm:mb-0"
           >
-            Socials
+            Around the web
           </h3>
         </div>
         <ul class="sm:flex-[3] max-w-xl">
@@ -330,8 +331,37 @@ import '../styles/global.css';
               </div>
             </div>
           </li>
+          <li class="mb-2">
+            <div>
+              <div>
+                <a
+                  class="flex items-center"
+                  href="https://medium.com/@danhoran"
+                  target="_blank"
+                >
+                  <h4 class="text-lg">Medium</h4>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 16 16"
+                    fill="currentColor"
+                    class="w-4 h-4 inline-block ml-1"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M8.914 6.025a.75.75 0 0 1 1.06 0 3.5 3.5 0 0 1 0 4.95l-2 2a3.5 3.5 0 0 1-5.396-4.402.75.75 0 0 1 1.251.827 2 2 0 0 0 3.085 2.514l2-2a2 2 0 0 0 0-2.828.75.75 0 0 1 0-1.06Z"
+                      clip-rule="evenodd"></path>
+                    <path
+                      fill-rule="evenodd"
+                      d="M7.086 9.975a.75.75 0 0 1-1.06 0 3.5 3.5 0 0 1 0-4.95l2-2a3.5 3.5 0 0 1 5.396 4.402.75.75 0 0 1-1.251-.827 2 2 0 0 0-3.085-2.514l-2 2a2 2 0 0 0 0 2.828.75.75 0 0 1 0 1.06Z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </li>
         </ul>
       </div>
     </main>
+    <Footer />
   </body>
 </html>

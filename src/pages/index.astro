@@ -1,6 +1,7 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import '../styles/global.css';
 ---
@@ -12,7 +13,7 @@ import '../styles/global.css';
   </head>
   <body class="flex flex-col min-h-screen pb-10 md:pb-0">
     <Header />
-    <main class="font-sans mx-5 md:mx-15 my-20 mt-auto">
+    <main class="font-sans mx-5 md:mx-15 mt-auto">
       <h1
         class="mb-[clamp(2rem,5vw,4rem)] font-semibold leading-none text-[clamp(3.8rem,15vw,5.8rem)]"
       >
@@ -127,5 +128,6 @@ import '../styles/global.css';
         </ul>
       </div>
     </main>
+    <Footer />
   </body>
 </html>

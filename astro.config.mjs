@@ -13,4 +13,9 @@ export default defineConfig({
 	},
 	output: 'static',
 	base: '/',
+	markdown: {
+    shikiConfig: {
+      theme: 'github-light', // or 'nord', 'dracula', etc.
+    },
+  },
 });
