@@ -2,11 +2,9 @@
 title: 'The accidental start that changed my career'
 description: 'Early experiences that shaped my love for software and the lessons that still guide me today.'
 pubDate: 'Jul 20 2025'
-duration: '8 minute read'
+duration: '4 minute read'
 location: 'Welwyn Garden City'
 ---
-
-There are moments in life that make you stop and reflect. This is one of those moments.
 
 I fell into software engineering by accident. My first job, second job if you count the Summer I spent cleaning a car garage, was as a Verification Engineer--pressing buttons on a phone and clicking next.
 
