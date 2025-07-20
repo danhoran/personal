@@ -25,13 +25,46 @@ const posts = (await getCollection('blog')).sort(
         <div
           class="sm:flex sm:flex-col sm:justify-between sm:flex-[1] sm:max-w-[400px] sm:basis-[80px] sm:shrink-0"
         >
-          <h1 class="hidden sm:block text-xl">Latest post</h1>
+          <h1 class="underline sm:no-underline mb-10 sm:mb-0 text-xl">
+            Latest post
+          </h1>
         </div>
         <div class="sm:flex-[3] max-w-xl">
           <ul>
             <li>
-              <a href="#">
-                <h4 class="title">Title</h4>
+              <a
+                href={`/blog/${posts[0].id}/`}
+                class="p-5 block md:p-10 mb-5 bg-gray-50 rounded-lg hover:bg-gray-200 transition-colors duration-500"
+              >
+                <div class="sm:flex sm:items-center sm:justify-between">
+                  <h4 class="title text-lg sm:pr-5 md:max-w-[400px]">
+                    {posts[0].data.title}
+                  </h4>
+                  <small
+                    class="date flex-full text-gray-500 flex items-center shrink-0"
+                  >
+                    <FormattedDate date={posts[0].data.pubDate} />
+                  </small>
+                </div>
+                <p class="mt-3 text-gray-500">{posts[0].data.description}</p>
+                <span
+                  class="mt-5 ml-4 flex items-center justify-center w-23 h-6 rounded-full bg-white text-gray-500 ml-auto"
+                >
+                  <small class="pl-2">Full post</small>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    class="w-4 h-4 ml-1 mt--1"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </span>
               </a>
             </li>
           </ul>
@@ -40,32 +73,31 @@ const posts = (await getCollection('blog')).sort(
       <hr
         class="mt-[clamp(2rem,5vw,4rem)] mb-[clamp(2rem,5vw,4rem)] border-gray-300"
       />
-      <div class="flex flex-col sm:flex-row gap-4 mt-20">
+      <div class="flex flex-col sm:flex-row gap-4">
         <div
           class="sm:flex sm:flex-col sm:justify-between sm:flex-[1] sm:max-w-[400px] sm:basis-[80px] sm:shrink-0"
         >
-          <h1 class="hidden sm:block text-xl">Older posts</h1>
+          <h1 class="underline sm:no-underline mb-10 sm:mb-0 text-xl">
+            Older posts
+          </h1>
         </div>
         <div class="sm:flex-[3] max-w-xl">
           <ul>
             {
-              posts.map((post) => (
+              posts.slice(1).map((post) => (
                 <li>
                   <a
                     href={`/blog/${post.id}/`}
-                    class="block p-10 mb-5 bg-gray-50 rounded-lg hover:bg-gray-200 transition-colors duration-500"
+                    class="p-5 block md:p-10 mb-5 bg-gray-50 rounded-lg hover:bg-gray-200 transition-colors duration-500"
                   >
-                    <h4 class="title text-lg">{post.data.title}</h4>
-                    <p class="date">
-                      <FormattedDate date={post.data.pubDate} />
-                    </p>
-                    <p class="text-gray-500">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Sed id augue rutrum, hendrerit neque non, tristique quam.
-                      Pellentesque sed mauris faucibus, sodales enim non,
-                      convallis nunc. Phasellus vel orci eu erat vulputate
-                      euismod sed at risus.
-                    </p>
+                    <div class="sm:flex sm:items-center sm:justify-between">
+                      <h4 class="title text-lg sm:pr-5 md:max-w-[400px]">
+                        {post.data.title}
+                      </h4>
+                      <small class="date flex-full text-gray-500 flex items-center shrink-0">
+                        <FormattedDate date={post.data.pubDate} />
+                      </small>
+                    </div>
                   </a>
                 </li>
               ))
