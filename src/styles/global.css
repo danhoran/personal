@@ -38,11 +38,26 @@
     text-decoration: underline;
   }
 
+  .prose ol {
+    list-style-type: decimal;     /* Use numbers */
+    list-style-position: inside;  /* Numbers inside the content box */
+    color: #1f2937;               /* Equivalent to Tailwind's text-gray-800 */
+    font-size: 1rem;              /* 16px (text-base) */
+    line-height: 1.5;             /* relaxed line height */
+    margin: 0 0 20px;
+    padding: 0;
+  }
+
+  .prose ol li {
+    color: #737382;
+    font-size: 18px;          /* Space between list items */
+  }
+
   .astro-code {
     border: 1px solid #d1d5dc;
     border-radius: 20px;
     font-size: 14px;
-    margin: 30px 0;
+    margin: 30px;
     padding: 20px;
   }
 }

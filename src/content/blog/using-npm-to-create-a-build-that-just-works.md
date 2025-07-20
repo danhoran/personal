@@ -2,7 +2,7 @@
 title: 'Using NPM to create a build that just works'
 description: 'In recent years Javascript tooling has put the peddle to the floor. We’ve seen the emergence of package managers, and the growth (and decline) of numerous task runners —and then there’s Webpack…'
 pubDate: 'Jul 01 2017'
-location: 'London, United Kingdom'
+location: 'London'
 duration: '4 minute read'
 ---
 
