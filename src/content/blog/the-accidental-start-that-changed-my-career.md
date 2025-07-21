@@ -40,7 +40,7 @@ Unlike the first two lessons, I realised how important this was immediately. I f
 
 I developed a strong sense of self-belief that wasn't there before. As long as I loved whatever I was doing, I could learn anything. I could write code, I could be a software engineer, I could even lead teams of people.
 
-There was a lesson in hiring here for me too, although I wouldn't put it to use until later in my career. If you can detect passion and love for a job, previous experience, education, or hours spent in a programming language doesn't matter. If the motivation is there, they can be unstoppable too.
+There was a lesson in hiring here too, although I wouldn't put it to use until later in my career. If you can detect passion and love for a job, previous experience, education, or hours spent in a programming language doesn't matter. If the motivation is there, they can be unstoppable too.
 
 ## Thank you, Mark
 
