@@ -15,7 +15,7 @@ const isActive = href === pathname || href === '/' + (subpath?.[0] || '');
     'inline-flex items-center px-3 py-1 rounded-full text-md transition',
     'hover:bg-gray-100 hover:text-gray-700 text-gray-700',
     className,
-    { 'bg-gray-200': isActive }, // optional "active" state styling
+    { 'bg-gray-800 text-white hover:bg-gray-800 hover:text-white': isActive }, // optional "active" state styling
   ]}
   {...props}
 >
