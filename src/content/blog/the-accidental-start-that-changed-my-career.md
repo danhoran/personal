@@ -12,7 +12,7 @@ Fast forward almost 20 years, and I find myself 5 years into the role of Enginee
 
 ## Where it all started
 
-Whilst working as a Verification Engineer, I was given the opportunity to work on a project that involved writing Batch files to automate a manual process. I hadn't written code before so I spent my evenings teaching myself how to write Windows Command Prompt scripts. Not out of necessity, but curiosity.
+Whilst working as a Verification Engineer, I was given the opportunity to work on a project that involved writing Batch files to automate a manual process. I hadn't written code before so I spent my evenings learning everything I could about Windows Command Prompt scripts. Not out of necessity, but curiosity.
 
 No one had ever told me that you could enjoy your job. And here I was in this strange new world where I couldn't wait to get to work.
 
@@ -20,12 +20,12 @@ But no matter how much I loved what I was doing the voice in my head kept tellin
 
 Two weeks passed. Still no tap.
 
-I figured out how to write those Batch files. I removed manual steps from our process, with code. When I entered a meeting my boss would introduce me by saying "This is Dan. He's the guy that wrote the scripts" and they would thank me. I realised that the people I was meeting were my customers. The idea that people could be delighted by a few lines of code in a Batch file I'd written was a revelation and only amplified my new found love for writing code.
+I figured out how to write those Batch files. I removed manual steps from our process, with code. When I entered a meeting my boss would introduce me by saying "This is Dan. He's the guy that wrote the scripts" and they would thank me. I realised that the people I was meeting were my customers. The idea that people could be delighted by a few lines of code that I had written was a revelation and only amplified my new found love for writing code.
 
 This simple start had taught me two things:
 
 1. It was possible to enjoy your job.
-2. You can delight people with software.
+2. You can delight people with software. Something that, previously, I had only ever thought possible through the lens of video games.
 
 Less than a year into my first role, I'd already learned two of the most important lessons of my career. I just didn't know it yet.
 
@@ -39,11 +39,13 @@ Unlike the first two lessons, I realised how important this was immediately. I f
 
 I developed a strong sense of self-belief that wasn't there before. As long as I loved whatever I was doing, I could learn anything. I could write code, I could be a software engineer, I could even lead teams of people.
 
+There was a lesson in hiring here for me too, although I wouldn't put it to use until later in my career. If you can detect passion and love for a job, previous experience, education, or hours spent in a programming language doesn't matter. If the motivation is there, they can be unstoppable too.
+
 ## Thank you, Mark
 
 Mark, my first boss, will never know how much he changed my life by giving me the opportunity to write those Batch files. Not only did he give me the chance to write code, he supported me in moving on to pursue a career in software engineering.
 
-The last thing I learned in that role, this time in leadership, was that you can change someone's whole career by giving them a chance.
+The last thing I learned in that role, this time in leadership, was that you can change a whole career by giving someone a chance and supporting them through it.
 
 Mark did that for me.
 
