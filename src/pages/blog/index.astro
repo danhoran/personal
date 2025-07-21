@@ -5,12 +5,20 @@ import Footer from '../../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
+import Tag from '../../components/Tag.astro';
 import { Image } from 'astro:assets';
 import '../../styles/global.css';
 
 const posts = (await getCollection('blog')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
+
+const postsCollection = await getCollection('blog');
+const allTags = [...new Set(postsCollection.flatMap(post => post.data.tags || []))].sort();
+const tagCounts = allTags.reduce((acc, tag) => {
+  acc[tag] = posts.filter(post => post.data.tags?.includes(tag)).length;
+  return acc;
+}, {} as Record<string, number>);
 ---
 
 <!doctype html>
@@ -80,6 +88,17 @@ const posts = (await getCollection('blog')).sort(
           <h1 class="underline sm:no-underline mb-10 sm:mb-0 text-xl">
             Older posts
           </h1>
+          <div class="hidden sm:block sm:flex-[3] mt-10 max-w-xl">
+            {allTags.length > 0 ? (
+              allTags.map((tag) => (
+                  <div class="mb-2">
+                    <Tag tag={tag} href={`/blog/${tag}`} size="md" />
+                  </div>
+                ))
+            ) : (
+              <p class="text-gray-500">No tags found.</p>
+            )}
+          </div>
         </div>
         <div class="sm:flex-[3] max-w-xl">
           <ul>
@@ -89,7 +108,6 @@ const posts = (await getCollection('blog')).sort(
                   <a
                     href={`/blog/${post.id}/`}
                     class="p-5 block md:p-10 mb-5 bg-gray-50 rounded-lg hover:bg-gray-200 transition-colors duration-500"
-                  >
                     <div class="sm:flex sm:items-center sm:justify-between">
                       <h4 class="title text-lg sm:pr-5 md:max-w-[400px]">
                         {post.data.title}

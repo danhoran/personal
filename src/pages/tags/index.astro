@@ -1,0 +1,49 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Tag from '../../components/Tag.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import { getCollection } from 'astro:content';
+import '../../styles/global.css';
+
+const posts = await getCollection('blog');
+const allTags = [...new Set(posts.flatMap(post => post.data.tags || []))].sort();
+const tagCounts = allTags.reduce((acc, tag) => {
+  acc[tag] = posts.filter(post => post.data.tags?.includes(tag)).length;
+  return acc;
+}, {} as Record<string, number>);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={`Tags - ${SITE_TITLE}`} description="Browse posts by tags" />
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <Header />
+    <main class="font-sans mx-5 md:mx-15">
+      <div class="flex flex-col sm:flex-row gap-4 mt-20">
+        <div
+          class="sm:flex sm:flex-col sm:justify-between sm:flex-[1] sm:max-w-[400px] sm:basis-[80px] sm:shrink-0"
+        >
+          <h1 class="underline sm:no-underline mb-10 sm:mb-0 text-xl">
+            All Tags
+          </h1>
+        </div>
+        <div class="sm:flex-[3] max-w-xl">
+          {allTags.length > 0 ? (
+            <div class="flex flex-wrap gap-3">
+              {allTags.map((tag) => (
+                <div class="flex items-center gap-2">
+                  <Tag tag={tag} href={`/blog/${tag}`} size="md" />
+                  <span class="text-gray-500 text-sm">({tagCounts[tag]})</span>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p class="text-gray-500">No tags found.</p>
+          )}
+        </div>
+      </div>
+    

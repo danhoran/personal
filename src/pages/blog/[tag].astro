@@ -1,0 +1,87 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Tag from '../../components/Tag.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
+import { SITE_TITLE } from '../../consts';
+import { getCollection } from 'astro:content';
+import '../../styles/global.css';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  const allTags = [...new Set(posts.flatMap(post => post.data.tags || []))];
+  
+  return allTags.map((tag) => ({
+    params: { tag },
+    props: {
+      posts: posts.filter(post => post.data.tags?.includes(tag))
+        .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+    },
+  }));
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+
+const postsCollection = await getCollection('blog');
+const allTags = [...new Set(postsCollection.flatMap(post => post.data.tags || []))].sort();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={`Posts tagged "${tag}" - ${SITE_TITLE}`} description={`All posts tagged with ${tag}`} />
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <Header />
+    <main class="font-sans mx-5 md:mx-15">
+      <div class="flex flex-col sm:flex-row gap-4 mt-20">
+        <div
+          class="sm:flex sm:flex-col sm:justify-between sm:flex-[1] sm:max-w-[400px] sm:basis-[80px] sm:shrink-0"
+        >
+          <div>
+            <h1 class="underline sm:no-underline mb-4 sm:mb-0 text-xl">
+              {tag.charAt(0).toUpperCase() + tag.slice(1)}
+            </h1>
+            <p class="text-gray-500 text-sm mt-2">{posts.length} post{posts.length !== 1 ? 's' : ''}</p>
+          </div>
+          <div class="hidden sm:block sm:flex-[3] mt-10 max-w-xl">
+            {allTags.length > 0 ? (
+              allTags.filter(t => t !== tag).map((tag) => (
+                  <div class="mb-2">
+                    <Tag tag={tag} href={`/blog/${tag}`} size="md" />
+                  </div>
+                ))
+            ) : (
+              <p class="text-gray-500">No tags found.</p>
+            )}
+          </div>
+        </div>
+        <div class="sm:flex-[3] max-w-xl">
+          <ul>
+            {posts.map((post) => (
+              <li>
+                <a
+                  href={`/blog/${post.id}/`}
+                  class="p-5 block md:p-10 mb-5 bg-gray-50 rounded-lg hover:bg-gray-200 transition-colors duration-500"
+                >
+                  <div class="sm:flex sm:items-center sm:justify-between">
+                    <h4 class="title text-lg sm:pr-5 md:max-w-[400px]">
+                      {post.data.title}
+                    </h4>
+                    <small class="date flex-full text-gray-500 flex items-center shrink-0">
+                      <FormattedDate date={post.data.pubDate} />
+                    </small>
+                  </div>
+                  <p class="mt-3 text-gray-500">{post.data.description}</p>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>

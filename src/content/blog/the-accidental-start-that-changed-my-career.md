@@ -4,11 +4,12 @@ description: 'Early experiences that shaped my love for software and the lessons
 pubDate: 'Jul 20 2025'
 duration: '4 minute read'
 location: 'Welwyn Garden City'
+tags: ['leadership']
 ---
 
 I fell into software engineering by accident. My first job, second job if you count the Summer I spent cleaning a car garage, was as a Verification Engineer--pressing buttons on a phone and clicking next.
 
-Fast forward almost 20 years, and I find myself 5 years into the role of Engineering Director leading an incredible team of leaders and software engineers.
+I could never have imagined that almost 20 years later, I'd find myself 5 years into the role of Engineering Director leading an incredible team of leaders and software engineers.
 
 ## Where it all started
 
