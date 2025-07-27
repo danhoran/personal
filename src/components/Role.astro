@@ -8,11 +8,14 @@ const { title, date, description, achievements } = Astro.props;
   <p class="text-gray-500">{description}</p>
   {
     achievements && achievements.length > 0 ? () => (
-      <ul class="mt-5 ml-4 list-disc">
-      {achievements.map((achievement) => (
-        <li class="text-gray-500">{achievement}</li>
-      ))}
-      </ul>
+      <div class="mt-5 list-disc p-4 block border rounded-md  border-gray-300">
+        <h4 class="text-sm mb-4">In the role...</h4>
+        <ul class="list-disc">
+        {achievements.map((achievement) => (
+          <li class="mb-2 ml-4 text-gray-500 text-xs">{achievement}</li>
+        ))}
+        </ul>
+      </div>
    ) : () => {}
   }
 </li>
