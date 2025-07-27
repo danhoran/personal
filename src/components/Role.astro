@@ -1,9 +1,18 @@
 ---
-const { title, date, description } = Astro.props;
+const { title, date, description, achievements } = Astro.props;
 ---
 
 <li class="mb-10 last:mb-0">
   <h4 class="text-lg">{title}</h4>
   <small class="block mb-5 text-gray-500">{date}</small>
   <p class="text-gray-500">{description}</p>
+  {
+    achievements && achievements.length > 0 ? () => (
+      <ul class="mt-5 ml-4 list-disc">
+      {achievements.map((achievement) => (
+        <li class="text-gray-500">{achievement}</li>
+      ))}
+      </ul>
+   ) : () => {}
+  }
 </li>
