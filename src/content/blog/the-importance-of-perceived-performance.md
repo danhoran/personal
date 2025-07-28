@@ -2,7 +2,7 @@
 title: 'The importance of perceived performance'
 description: 'Sometimes performance is simply about moving forward'
 pubDate: 'Jul 28 2025'
-duration: '4 minutes'
+duration: '4 minute read'
 location: 'Trondheim'
 tags: ['software engineering', 'performance']
 ---
