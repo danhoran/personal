@@ -42,7 +42,7 @@ const allTags = [...new Set(postsCollection.flatMap(post => post.data.tags || []
         >
           <div>
             <h1 class="underline sm:no-underline mb-4 sm:mb-0 text-xl">
-              {tag.charAt(0).toUpperCase() + tag.slice(1)}
+              {tag}
             </h1>
             <p class="text-gray-500 text-sm mt-2">{posts.length} post{posts.length !== 1 ? 's' : ''}</p>
           </div>

@@ -14,12 +14,12 @@ const sizeClasses = size === 'md' ? 'px-3 py-1 text-md' : 'px-2 py-1 text-xs';
     href={href}
     class={`inline-block bg-gray-50 hover:bg-gray-200 text-gray-700 rounded-full hover:bg-blue-200 transition-colors duration-200 ${sizeClasses}`}
   >
-    {tag.charAt(0).toUpperCase() + tag.slice(1)}
+    {tag}
   </a>
 ) : (
   <span 
     class={`inline-block bg-gray-50 hover:bg-gray-200 rounded-full ${sizeClasses}`}
   >
-    {tag.charAt(0).toUpperCase() + tag.slice(1)}
+    {tag}
   </span>
 )}

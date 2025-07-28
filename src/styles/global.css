@@ -53,6 +53,11 @@
     font-size: 18px;          /* Space between list items */
   }
 
+  .prose hr {
+    color: #cecece;
+    margin-top: 55px;
+  }
+
   .astro-code {
     border: 1px solid #d1d5dc;
     border-radius: 20px;
