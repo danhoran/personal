@@ -1,5 +1,5 @@
 ---
-title: 'A new way to LLM'
+title: 'A better way to LLM'
 description: 'A solution for easier access to more models'
 pubDate: 'Jul 30 2025'
 duration: '5 minute read'
