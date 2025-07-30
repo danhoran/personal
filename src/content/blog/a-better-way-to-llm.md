@@ -59,11 +59,11 @@ One of my requirements is to be able to quickly switch between the most effectiv
 
 OpenRouter aggregates models and provides access via a single API. It also provides a pay-as-you-go subscription model where you only pay for what you use. Check and check.
 
-### MacMind
+### MindMac
 
 [MindMac](https://mindmac.app/) offers a unified interface for interacting with models and organising conversations. Crucially, it integrates with OpenRouter allowing me to quickly switch models for each conversation (even within conversations) in order to the most appropriate model.
 
-### IDE integration
+### Kilo Code & Cline
 
 VSCode is my IDE of choice. I've spent too long customising it to consider switching now. Whilst a terinal client would work, I've also explored integrated extensions that work with OpenRouter. The two winners right now are [Cline](https://cline.bot/) and [Kilo Code](https://kilocode.ai/). I'm not married to either of these yet and this is a vibrant space with challengers appearing all the time.
 
