@@ -8,126 +8,127 @@ import '../styles/global.css';
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <body class="flex flex-col min-h-screen pb-10 md:pb-0">
-    <Header />
-    <main class="font-sans mx-5 md:mx-15 mt-auto">
-      <h1
-        class="mb-[clamp(2rem,5vw,4rem)] font-semibold leading-none text-[clamp(3.8rem,15vw,5.8rem)]"
-      >
-        Developer.<br />
-        <span class="hidden lg:inline">Engineering </span>Leader<span
-          class="animate-pulse-fullstop inline-block">.</span
-        >
-        <style>
-          .animate-pulse-fullstop {
-            animation: pulseFullstop 1.2s infinite;
-          }
-          @keyframes pulseFullstop {
-            0%,
-            100% {
-              opacity: 1;
-            }
-            50% {
-              opacity: 0;
-            }
-          }
-        </style>
-      </h1>
-      <hr class="mb-[clamp(2rem,5vw,4rem)] border-gray-300" />
-      <div class="flex justify-between items-start flex-wrap gap-8">
-        <div>
-          <p class="text-xl max-w-sm mb-10">
-            15 years of experience building software, leading teams, caring
-            about how things work and how people feel.
-          </p>
-          <a
-            href="/about"
-            class="md:hidden px-6 py-4 rounded-full bg-gray-200 text-gray-800 text-md font-medium"
-            >Read more</a
-          >
-        </div>
-        <ul
-          class="flex flex-wrap gap-3 justify-end max-w-md text-right hidden xs:grid xs:top-[6.5rem] xs:right-16 xs:grid sm:grid sm:top-[6.5rem] sm:right-16 md:grid lg:flex absolute md:top-[6.5rem] md:right-16 lg:static md:z-10
+    <head>
+        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    </head>
+    <body class="flex flex-col min-h-screen pb-10 md:pb-0">
+        <Header />
+        <main class="font-sans mx-5 md:mx-15 mt-auto">
+            <h1
+                class="mb-[clamp(2rem,5vw,4rem)] font-semibold leading-none text-[clamp(3.8rem,15vw,5.8rem)]"
+            >
+                Developer.<br />
+                <span class="hidden lg:inline">Engineering </span>Leader<span
+                    class="animate-pulse-fullstop inline-block">.</span
+                >
+                <style>
+                    .animate-pulse-fullstop {
+                        animation: pulseFullstop 1.2s infinite;
+                    }
+                    @keyframes pulseFullstop {
+                        0%,
+                        100% {
+                            opacity: 1;
+                        }
+                        50% {
+                            opacity: 0;
+                        }
+                    }
+                </style>
+            </h1>
+            <hr class="mb-[clamp(2rem,5vw,4rem)] border-gray-300" />
+            <div class="flex justify-between items-start flex-wrap gap-8">
+                <div>
+                    <p class="text-xl max-w-sm mb-10">
+                        15 years of experience building software, leading
+                        teams, caring about how things work and how people
+                        feel.
+                    </p>
+                    <a
+                        href="/about"
+                        class="md:hidden px-6 py-4 rounded-full bg-gray-200 text-gray-800 text-md font-medium"
+                        >Read more</a
+                    >
+                </div>
+                <ul
+                    class="flex flex-wrap gap-3 justify-end max-w-md text-right hidden xs:grid xs:top-[6.5rem] xs:right-16 xs:grid sm:grid sm:top-[6.5rem] sm:right-16 md:grid lg:flex absolute md:top-[6.5rem] md:right-16 lg:static md:z-10
           [@media(max-width:760px)]:hidden [@media(max-height:880px)]:hidden"
-        >
-          <li class="my-1">
-            <span
-              class="px-4 py-2 rounded-full bg-gray-200 text-gray-800 text-md font-medium"
-              >AI</span
-            >
-          </li>
-          <li class="my-1">
-            <span
-              class="px-4 py-2 rounded-full bg-gray-200 text-gray-800 text-md font-medium"
-              >Observability</span
-            >
-          </li>
-          <li class="my-1">
-            <span
-              class="px-4 py-2 rounded-full bg-gray-200 text-gray-800 text-md font-medium"
-              >Performance</span
-            >
-          </li>
-          <li class="my-1">
-            <span
-              class="px-4 py-2 rounded-full bg-gray-200 text-gray-800 text-md font-medium"
-              >Security</span
-            >
-          </li>
-          <li class="my-1">
-            <span
-              class="px-4 py-2 rounded-full bg-gray-200 text-gray-800 text-md font-medium"
-              >Cloud</span
-            >
-          </li>
-          <li class="my-1">
-            <span
-              class="px-4 py-2 rounded-full bg-gray-200 text-gray-800 text-md font-medium"
-              >Leadership</span
-            >
-          </li>
-          <li class="my-1">
-            <span
-              class="px-4 py-2 rounded-full bg-gray-200 text-gray-800 text-md font-medium"
-              >Delivery</span
-            >
-          </li>
-          <li class="my-1">
-            <span
-              class="px-4 py-2 rounded-full bg-gray-200 text-gray-800 text-md font-medium"
-              >Reliability</span
-            >
-          </li>
-          <li class="my-1">
-            <span
-              class="px-4 py-2 rounded-full bg-gray-200 text-gray-800 text-md font-medium"
-              >CI/CD</span
-            >
-          </li>
-          <li class="my-1">
-            <span
-              class="px-4 py-2 rounded-full bg-gray-200 text-gray-800 text-md font-medium"
-              >Scalability</span
-            >
-          </li>
-          <li class="my-1">
-            <span
-              class="px-4 py-2 rounded-full bg-gray-200 text-gray-800 text-md font-medium"
-              >System Design</span
-            >
-          </li>
-          <li class="my-1">
-            <span
-              class="px-4 py-2 rounded-full bg-gray-200 text-gray-800 text-md font-medium"
-              >Data</span
-            >
-          </li>
-        </ul>
-      </div>
-    </main>
-    <Footer />
-  </body>
+                >
+                    <li class="my-1">
+                        <span
+                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-800 text-md font-medium"
+                            >AI</span
+                        >
+                    </li>
+                    <li class="my-1">
+                        <span
+                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-800 text-md font-medium"
+                            >Observability</span
+                        >
+                    </li>
+                    <li class="my-1">
+                        <span
+                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-800 text-md font-medium"
+                            >Performance</span
+                        >
+                    </li>
+                    <li class="my-1">
+                        <span
+                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-800 text-md font-medium"
+                            >Security</span
+                        >
+                    </li>
+                    <li class="my-1">
+                        <span
+                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-800 text-md font-medium"
+                            >Cloud</span
+                        >
+                    </li>
+                    <li class="my-1">
+                        <span
+                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-800 text-md font-medium"
+                            >Leadership</span
+                        >
+                    </li>
+                    <li class="my-1">
+                        <span
+                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-800 text-md font-medium"
+                            >Delivery</span
+                        >
+                    </li>
+                    <li class="my-1">
+                        <span
+                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-800 text-md font-medium"
+                            >Reliability</span
+                        >
+                    </li>
+                    <li class="my-1">
+                        <span
+                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-800 text-md font-medium"
+                            >CI/CD</span
+                        >
+                    </li>
+                    <li class="my-1">
+                        <span
+                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-800 text-md font-medium"
+                            >Scalability</span
+                        >
+                    </li>
+                    <li class="my-1">
+                        <span
+                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-800 text-md font-medium"
+                            >System Design</span
+                        >
+                    </li>
+                    <li class="my-1">
+                        <span
+                            class="px-4 py-2 rounded-full bg-gray-200 text-gray-800 text-md font-medium"
+                            >Data</span
+                        >
+                    </li>
+                </ul>
+            </div>
+        </main>
+        <Footer />
+    </body>
 </html>

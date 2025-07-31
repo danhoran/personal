@@ -11,398 +11,414 @@ import '../styles/global.css';
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <body class="flex flex-col min-h-screen">
-    <Header />
-    <main class="font-sans mx-5 md:mx-15 my-20 mt-auto">
-      <Introduction />
-      <hr
-        class="mt-[clamp(2rem,5vw,4rem)] mb-[clamp(2rem,5vw,4rem)] border-gray-300"
-      />
-      <div class="flex flex-col sm:flex-row gap-4">
-        <div
-          class="sm:flex sm:flex-col sm:justify-between sm:flex-[1] sm:max-w-[400px] sm:basis-[80px] sm:shrink-0"
-        >
-          <h3
-            class="underline sm:no-underline flex-shrink-0 mr-8 text-xl mb-10 sm:mb-0"
-          >
-            Roles
-          </h3>
-        </div>
-        <ul class="sm:flex-[3] max-w-xl">
-          <Role
-            title="Engineering Director"
-            date="July 2020 - Present"
-            description="Leading an org of ~150 software engineers across Java, mobile (iOS/Android), and web technologies in multiple countries, providing revenue generating software in Search, Product Discovery, Retail Media, and Content for a global platform-as-a-service provider (B2B2C)."
-            achievements={[
-              "Scaled search and discovery services to support millions of daily requests, ensuring low-latency and high availability at global scale.",
-              "Drove adoption of engineering practices with deep focus on reliability, observability, performance, and security.",
-              "Delivered ML-powered recommendations and predictive features that improved user engagement and relevance across search and discovery journeys.",
-              "Led end-to-end development of a targeted advertising engine and key third-party integrations, generating millions in recurring revenue, expanding partner ecosystem, and increasing campaign ROI."
-            ]}
-          />
-          <Role
-            title="Senior Engineering Manager"
-            date="Dec 2017 - July 2020"
-            description="Hands-on role leading a dedicated team of ~30 Java, mobile (iOS/Android), and web software engineers through feature delivery, major technology upgrades, and process improvements to an end-to-end e-commerce platform; always focusing on collaboration, building trust, and delivering a profitable platform for our partners."
-            achievements={[
-              "Led the migration from a legacy technology stack to a modern platform using React and Node.js",
-              "Implemented robust CI/CD pipelines for all new applications and services, accelerating release cycles and improving deployment reliability",
-              "Improved customer-facing performance by partnering with stakeholders to perform deep-dives into frontend and backend systems.",
-              "Organised engineering teams and revised processes, reducing cycle time by 40% and nearly doubling feature throughput within a year."
-            ]}
+    <head>
+        <BaseHead
+            title={SITE_TITLE + ' - About '}
+            description={SITE_DESCRIPTION}
+        />
+    </head>
+    <body class="flex flex-col min-h-screen">
+        <Header />
+        <main class="font-sans mx-5 md:mx-15 my-20 mt-auto">
+            <Introduction />
+            <hr
+                class="mt-[clamp(2rem,5vw,4rem)] mb-[clamp(2rem,5vw,4rem)] border-gray-300"
             />
-          <Role
-            title="Engineering Manager"
-            date="Apr 2016 - Dec 2017"
-            description="A hands-on role leading a team of eight software engineers developing a web e-commerce platform-as-a-service, using Java, React, and Node.js."
-            achievements={[
-              "Led a migration of the OSP e-commerce platform to React, and Node.js.",
-              "Setup build pipelines using continuous delivery principles.",
-              "Fostered collaboration between development and design teams.",
-              "Worked with public web experts to help improve CSS expertise within our department.",
-              "Mentored Java and web software engineers",
-              "Led efforts to reduce lead time by improving collaboration between teams across the business.",
-              "Organised developer events such as Code in the Dark."
-            ]}
-            />
-          <Role
-            title="Senior Software Engineer"
-            date="Nov 2014 - Apr 2016"
-            description="Architected and developed a leading general merchandise white-label e-commerce platform, launching new customer propositions with global brands like Marie Claire."
-            achievements={[
-              "Architected the platforms front end solutions from the ground up.",
-              "Led a rewrite of the platform to AngularJS.",
-              "Built innovative dashboard and monitoring applications.",
-              "Mentored developers as the team grew and introduced best practices to the front end.",
-              "Designed and implemented the technical interview process.",
-              "Consultant to teams across the business in building and architecting front end applications."
-            ]}
-            />
-          <Role
-            title="Software Engineer"
-            date="Aug 2008 - Nov 2014"
-            description="Software Engineer working with Javascript, Java, PHP across e-commerce, communications, marine, and health services."
-            achievements={[
-              "Developed a complete rework, and modernisation, of the user interface.",
-              "Introduced SASS, and CSS principles to the department.",
-              "Integrated BackboneJS and unit-testing frameworks to the platform.",
-              "Championed web accessibility putting Ocado firmly ahead of competitors.",
-              "Developed and launched complete web solutions for a number of clients in various sectors including retail, marine, and health and wellbeing."
-            ]}
-            />
-          <Role
-            title="Verification Engineer"
-            date="Apr 2007 - Jun 2008"
-            description="Focused on ensuring software stability and reliability while introducing software automation across the department—ultimately sparking my passion for software engineering."
-            achievements={[
-              "Ensured the ongoing stability and reliability of software solutions.",
-              "Automated verification tasks through software.",
-              "Built and maintained asset tracking applications."
-            ]}
-            />
-        </ul>
-      </div>
-      <hr
-        class="mt-[clamp(2rem,5vw,4rem)] mb-[clamp(2rem,5vw,4rem)] border-gray-300"
-      />
-      <div class="flex flex-col sm:flex-row gap-4">
-        <div
-          class="sm:flex sm:flex-col sm:justify-between sm:flex-[1] sm:max-w-[400px] sm:basis-[80px] sm:shrink-0"
-        >
-          <h3
-            class="underline sm:no-underline flex-shrink-0 mr-8 text-xl mb-10 sm:mb-0"
-          >
-            Volunteer
-          </h3>
-        </div>
-        <ul class="sm:flex-[3] max-w-xl">
-          <li class="mb-10 last:mb-0">
-            <div>
-              <div class="sm:flex sm:items-center sm:justify-between mb-2">
-                <h4 class="text-lg">Teaching Children to Code</h4>
-                <small class="flex-full text-gray-500 flex items-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    class="w-4 h-4 inline-block mr-1"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
-                      clip-rule="evenodd"></path>
-                  </svg>
-                  Welwyn Garden City, United Kingdom
-                </small>
-              </div>
-              <p class="text-gray-500">
-                Volunteering at a local primary school, where I introduced
-                children to the basics of coding through fun, hands-on
-                activities. Using simple programming tools like Scratch, I
-                helped students build confidence in problem-solving, creativity,
-                and logical thinking.
-              </p>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <hr
-        class="mt-[clamp(2rem,5vw,4rem)] mb-[clamp(2rem,5vw,4rem)] border-gray-300"
-      />
-      <div class="flex flex-col sm:flex-row gap-4">
-        <div
-          class="sm:flex sm:flex-col sm:justify-between sm:flex-[1] sm:max-w-[400px] sm:basis-[80px] sm:shrink-0"
-        >
-          <h3
-            class="underline sm:no-underline flex-shrink-0 mr-8 text-xl mb-10 sm:mb-0"
-          >
-            Education
-          </h3>
-        </div>
-        <ul class="sm:flex-[3] max-w-xl">
-          <li class="mb-5 sm:mb-2">
-            <div>
-              <div class="sm:flex sm:items-center sm:justify-between">
-                <h4 class="text-lg">University of Bedfordshire</h4>
-                <small class="text-gray-500 flex items-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    class="w-4 h-4 inline-block mr-1"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
-                      clip-rule="evenodd"></path>
-                  </svg>
-                  Luton, United Kingdom
-                </small>
-              </div>
-            </div>
-          </li>
-          <li class="mb-2 last:mb-0">
-            <div>
-              <div class="sm:flex sm:items-center sm:justify-between">
-                <h4 class="text-lg">Barnfield College</h4>
-                <small class="text-gray-500 flex items-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    class="w-4 h-4 inline-block mr-1"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
-                      clip-rule="evenodd"></path>
-                  </svg>
-                  Luton, United Kingdom
-                </small>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <hr
-        class="mt-[clamp(2rem,5vw,4rem)] mb-[clamp(2rem,5vw,4rem)] border-gray-300"
-      />
-      <div class="flex flex-col sm:flex-row gap-4">
-        <div
-          sm:mb-0
-          class="m:flex sm:flex-col sm:justify-between sm:flex-[1] sm:max-w-[400px] sm:basis-[80px] sm:shrink-0"
-        >
-          <h3
-            class="underline sm:no-underline flex-shrink-0 mr-8 text-xl mb-10 sm:mb-0"
-          >
-            Developing for
-          </h3>
-        </div>
-        <ul class="sm:flex-[3] max-w-xl">
-          <Project
-            icon="/images/ocado-logo.png"
-            name="Ocado"
-            location="Hatfield, United Kingdom"
-            description="The UKs largest pure-play online grocer, known for its cutting-edge automation and delivery from high-tech fulfilment centres."
-          />
-          <Project
-            icon="/images/ocado-logo.png"
-            name="ICA Gruppen"
-            location="Solna, Sweden"
-            description="One of Sweden’s largest retail companies, operating thousands of grocery stores and pharmacies, uniquely combining local ownership with national scale."
-          />
-          <Project
-            icon="https://placehold.co/60x60"
-            name="Telenor"
-            location="Fornebu, Norway"
-            description="Norway’s largest telecom provider, operating across the Nordics and Asia, and uniquely known for its global reach combined with strong local trust."
-          />
-          <Project
-            icon="https://placehold.co/60x60"
-            name="Morrisons"
-            location="Bradford, United Kingdom"
-            description="One of the UK’s biggest supermarket chains, owning much of its food supply chain—from farm to shelf."
-          />
-          <Project
-            icon="https://placehold.co/60x60"
-            name="Marie Claire"
-            location="London, United Kingdom"
-            description="Marie Claire is a globally recognized fashion and lifestyle brand, uniquely blending Parisian elegance with empowering content across media and retail."
-          />
-          <Project
-            icon="https://placehold.co/60x60"
-            name="Lotte"
-            location="Seoul, South Korea"
-            description="One of South Korea’s largest conglomerates, spanning retail, food, and entertainment, and is uniquely known for blending consumer lifestyle brands with sprawling urban developments."
-          />
-          <Project
-            icon="https://placehold.co/60x60"
-            name="Auchan Polska"
-            location="Warsaw, Poland"
-            description="Auchan Polska is a major hypermarket chain in Poland, offering wide-format retail with a French touch and a strong focus on price and private-label value."
-          />
-          <Project
-            icon="https://placehold.co/60x60"
-            name="Groupe Casino"
-            location="Saint-Étienne, France"
-            description="Major French retail group, operating diverse supermarket brands and pioneering data-driven retail through its tech-driven subsidiary, Cdiscount."
-          />
-          <Project
-            icon="https://placehold.co/60x60"
-            name="Sobeys"
-            location="Stellarton, Canada"
-            description="One of Canada’s largest food retailers, known for its coast-to-coast presence and unique family-owned heritage within the Empire Company group."
-          />
-          <Project
-            icon="https://placehold.co/60x60"
-            name="Bon Preu"
-            location="Barcelona, Spain"
-            description="A leading Catalan supermarket chain in Spain, uniquely focused on local products and sustainability across its growing network of stores."
-          />
-          <Project
-            icon="https://placehold.co/60x60"
-            name="Alcampo"
-            location="Madrid, Spain"
-            description="One of Spain’s major hypermarket chains, combining large-format retail with a strong commitment to affordable quality and French-rooted ownership through Auchan."
-          />
-          <Project
-            icon="https://placehold.co/60x60"
-            name="Aeon"
-            location="Chiba, Japan"
-            description="Japan’s largest retail group, operating thousands of stores and uniquely integrating shopping, finance, and community services under one corporate umbrella."
-          />
-          <Project
-            icon="https://placehold.co/60x60"
-            name="Panda Retail Company"
-            location="Jeddah, Saudi Arabia"
-            description="One of Saudi Arabia’s largest grocery chains, uniquely blending modern retail formats with deep local market reach across the Kingdom."
-          />
-        </ul>
-      </div>
-      <hr
-        class="mt-[clamp(2rem,5vw,4rem)] mb-[clamp(2rem,5vw,4rem)] border-gray-300"
-      />
-      <div class="flex flex-col sm:flex-row gap-4">
-        <div
-          class="sm:flex sm:flex-col sm:justify-between sm:flex-[1] sm:max-w-[400px] sm:basis-[80px] sm:shrink-0"
-        >
-          <h3
-            class="underline sm:no-underline flex-shrink-0 mr-8 text-xl mb-10 sm:mb-0"
-          >
-            Around the web
-          </h3>
-        </div>
-        <ul class="sm:flex-[3] max-w-xl">
-          <li class="mb-2">
-            <div>
-              <div>
-                <a
-                  class="flex items-center"
-                  href="https://github.com/danhoran"
-                  target="_blank"
+            <div class="flex flex-col sm:flex-row gap-4">
+                <div
+                    class="sm:flex sm:flex-col sm:justify-between sm:flex-[1] sm:max-w-[400px] sm:basis-[80px] sm:shrink-0"
                 >
-                  <h4 class="text-lg">Github</h4>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 16 16"
-                    fill="currentColor"
-                    class="w-4 h-4 inline-block ml-1"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M8.914 6.025a.75.75 0 0 1 1.06 0 3.5 3.5 0 0 1 0 4.95l-2 2a3.5 3.5 0 0 1-5.396-4.402.75.75 0 0 1 1.251.827 2 2 0 0 0 3.085 2.514l2-2a2 2 0 0 0 0-2.828.75.75 0 0 1 0-1.06Z"
-                      clip-rule="evenodd"></path>
-                    <path
-                      fill-rule="evenodd"
-                      d="M7.086 9.975a.75.75 0 0 1-1.06 0 3.5 3.5 0 0 1 0-4.95l2-2a3.5 3.5 0 0 1 5.396 4.402.75.75 0 0 1-1.251-.827 2 2 0 0 0-3.085-2.514l-2 2a2 2 0 0 0 0 2.828.75.75 0 0 1 0 1.06Z"
-                      clip-rule="evenodd"></path>
-                  </svg>
-                </a>
-              </div>
+                    <h3
+                        class="underline sm:no-underline flex-shrink-0 mr-8 text-xl mb-10 sm:mb-0"
+                    >
+                        Roles
+                    </h3>
+                </div>
+                <ul class="sm:flex-[3] max-w-xl">
+                    <Role
+                        title="Engineering Director"
+                        date="July 2020 - Present"
+                        description="Leading an org of ~150 software engineers across Java, mobile (iOS/Android), and web technologies in multiple countries, providing revenue generating software in Search, Product Discovery, Retail Media, and Content for a global platform-as-a-service provider (B2B2C)."
+                        achievements={[
+                            'Scaled search and discovery services to support millions of daily requests, ensuring low-latency and high availability at global scale.',
+                            'Drove adoption of engineering practices with deep focus on reliability, observability, performance, and security.',
+                            'Delivered ML-powered recommendations and predictive features that improved user engagement and relevance across search and discovery journeys.',
+                            'Led end-to-end development of a targeted advertising engine and key third-party integrations, generating millions in recurring revenue, expanding partner ecosystem, and increasing campaign ROI.',
+                        ]}
+                    />
+                    <Role
+                        title="Senior Engineering Manager"
+                        date="Dec 2017 - July 2020"
+                        description="Hands-on role leading a dedicated team of ~30 Java, mobile (iOS/Android), and web software engineers through feature delivery, major technology upgrades, and process improvements to an end-to-end e-commerce platform; always focusing on collaboration, building trust, and delivering a profitable platform for our partners."
+                        achievements={[
+                            'Led the migration from a legacy technology stack to a modern platform using React and Node.js',
+                            'Implemented robust CI/CD pipelines for all new applications and services, accelerating release cycles and improving deployment reliability',
+                            'Improved customer-facing performance by partnering with stakeholders to perform deep-dives into frontend and backend systems.',
+                            'Organised engineering teams and revised processes, reducing cycle time by 40% and nearly doubling feature throughput within a year.',
+                        ]}
+                    />
+                    <Role
+                        title="Engineering Manager"
+                        date="Apr 2016 - Dec 2017"
+                        description="A hands-on role leading a team of eight software engineers developing a web e-commerce platform-as-a-service, using Java, React, and Node.js."
+                        achievements={[
+                            'Led a migration of the OSP e-commerce platform to React, and Node.js.',
+                            'Setup build pipelines using continuous delivery principles.',
+                            'Fostered collaboration between development and design teams.',
+                            'Worked with public web experts to help improve CSS expertise within our department.',
+                            'Mentored Java and web software engineers',
+                            'Led efforts to reduce lead time by improving collaboration between teams across the business.',
+                            'Organised developer events such as Code in the Dark.',
+                        ]}
+                    />
+                    <Role
+                        title="Senior Software Engineer"
+                        date="Nov 2014 - Apr 2016"
+                        description="Architected and developed a leading general merchandise white-label e-commerce platform, launching new customer propositions with global brands like Marie Claire."
+                        achievements={[
+                            'Architected the platforms front end solutions from the ground up.',
+                            'Led a rewrite of the platform to AngularJS.',
+                            'Built innovative dashboard and monitoring applications.',
+                            'Mentored developers as the team grew and introduced best practices to the front end.',
+                            'Designed and implemented the technical interview process.',
+                            'Consultant to teams across the business in building and architecting front end applications.',
+                        ]}
+                    />
+                    <Role
+                        title="Software Engineer"
+                        date="Aug 2008 - Nov 2014"
+                        description="Software Engineer working with Javascript, Java, PHP across e-commerce, communications, marine, and health services."
+                        achievements={[
+                            'Developed a complete rework, and modernisation, of the user interface.',
+                            'Introduced SASS, and CSS principles to the department.',
+                            'Integrated BackboneJS and unit-testing frameworks to the platform.',
+                            'Championed web accessibility putting Ocado firmly ahead of competitors.',
+                            'Developed and launched complete web solutions for a number of clients in various sectors including retail, marine, and health and wellbeing.',
+                        ]}
+                    />
+                    <Role
+                        title="Verification Engineer"
+                        date="Apr 2007 - Jun 2008"
+                        description="Focused on ensuring software stability and reliability while introducing software automation across the department—ultimately sparking my passion for software engineering."
+                        achievements={[
+                            'Ensured the ongoing stability and reliability of software solutions.',
+                            'Automated verification tasks through software.',
+                            'Built and maintained asset tracking applications.',
+                        ]}
+                    />
+                </ul>
             </div>
-          </li>
-          <li class="mb-2">
-            <div>
-              <div>
-                <a
-                  class="flex items-center"
-                  href="https://www.linkedin.com/in/dan-horan/"
-                  target="_blank"
+            <hr
+                class="mt-[clamp(2rem,5vw,4rem)] mb-[clamp(2rem,5vw,4rem)] border-gray-300"
+            />
+            <div class="flex flex-col sm:flex-row gap-4">
+                <div
+                    class="sm:flex sm:flex-col sm:justify-between sm:flex-[1] sm:max-w-[400px] sm:basis-[80px] sm:shrink-0"
                 >
-                  <h4 class="text-lg">LinkedIn</h4>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 16 16"
-                    fill="currentColor"
-                    class="w-4 h-4 inline-block ml-1"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M8.914 6.025a.75.75 0 0 1 1.06 0 3.5 3.5 0 0 1 0 4.95l-2 2a3.5 3.5 0 0 1-5.396-4.402.75.75 0 0 1 1.251.827 2 2 0 0 0 3.085 2.514l2-2a2 2 0 0 0 0-2.828.75.75 0 0 1 0-1.06Z"
-                      clip-rule="evenodd"></path>
-                    <path
-                      fill-rule="evenodd"
-                      d="M7.086 9.975a.75.75 0 0 1-1.06 0 3.5 3.5 0 0 1 0-4.95l2-2a3.5 3.5 0 0 1 5.396 4.402.75.75 0 0 1-1.251-.827 2 2 0 0 0-3.085-2.514l-2 2a2 2 0 0 0 0 2.828.75.75 0 0 1 0 1.06Z"
-                      clip-rule="evenodd"></path>
-                  </svg>
-                </a>
-              </div>
+                    <h3
+                        class="underline sm:no-underline flex-shrink-0 mr-8 text-xl mb-10 sm:mb-0"
+                    >
+                        Volunteer
+                    </h3>
+                </div>
+                <ul class="sm:flex-[3] max-w-xl">
+                    <li class="mb-10 last:mb-0">
+                        <div>
+                            <div
+                                class="sm:flex sm:items-center sm:justify-between mb-2"
+                            >
+                                <h4 class="text-lg">
+                                    Teaching Children to Code
+                                </h4>
+                                <small
+                                    class="flex-full text-gray-500 flex items-center"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24"
+                                        fill="currentColor"
+                                        class="w-4 h-4 inline-block mr-1"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    Welwyn Garden City, United Kingdom
+                                </small>
+                            </div>
+                            <p class="text-gray-500">
+                                Volunteering at a local primary school, where I
+                                introduced children to the basics of coding
+                                through fun, hands-on activities. Using simple
+                                programming tools like Scratch, I helped
+                                students build confidence in problem-solving,
+                                creativity, and logical thinking.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
             </div>
-          </li>
-          <li class="mb-2">
-            <div>
-              <div>
-                <a
-                  class="flex items-center"
-                  href="https://medium.com/@danhoran"
-                  target="_blank"
+            <hr
+                class="mt-[clamp(2rem,5vw,4rem)] mb-[clamp(2rem,5vw,4rem)] border-gray-300"
+            />
+            <div class="flex flex-col sm:flex-row gap-4">
+                <div
+                    class="sm:flex sm:flex-col sm:justify-between sm:flex-[1] sm:max-w-[400px] sm:basis-[80px] sm:shrink-0"
                 >
-                  <h4 class="text-lg">Medium</h4>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 16 16"
-                    fill="currentColor"
-                    class="w-4 h-4 inline-block ml-1"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M8.914 6.025a.75.75 0 0 1 1.06 0 3.5 3.5 0 0 1 0 4.95l-2 2a3.5 3.5 0 0 1-5.396-4.402.75.75 0 0 1 1.251.827 2 2 0 0 0 3.085 2.514l2-2a2 2 0 0 0 0-2.828.75.75 0 0 1 0-1.06Z"
-                      clip-rule="evenodd"></path>
-                    <path
-                      fill-rule="evenodd"
-                      d="M7.086 9.975a.75.75 0 0 1-1.06 0 3.5 3.5 0 0 1 0-4.95l2-2a3.5 3.5 0 0 1 5.396 4.402.75.75 0 0 1-1.251-.827 2 2 0 0 0-3.085-2.514l-2 2a2 2 0 0 0 0 2.828.75.75 0 0 1 0 1.06Z"
-                      clip-rule="evenodd"></path>
-                  </svg>
-                </a>
-              </div>
+                    <h3
+                        class="underline sm:no-underline flex-shrink-0 mr-8 text-xl mb-10 sm:mb-0"
+                    >
+                        Education
+                    </h3>
+                </div>
+                <ul class="sm:flex-[3] max-w-xl">
+                    <li class="mb-5 sm:mb-2">
+                        <div>
+                            <div
+                                class="sm:flex sm:items-center sm:justify-between"
+                            >
+                                <h4 class="text-lg">
+                                    University of Bedfordshire
+                                </h4>
+                                <small class="text-gray-500 flex items-center">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24"
+                                        fill="currentColor"
+                                        class="w-4 h-4 inline-block mr-1"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    Luton, United Kingdom
+                                </small>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="mb-2 last:mb-0">
+                        <div>
+                            <div
+                                class="sm:flex sm:items-center sm:justify-between"
+                            >
+                                <h4 class="text-lg">Barnfield College</h4>
+                                <small class="text-gray-500 flex items-center">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24"
+                                        fill="currentColor"
+                                        class="w-4 h-4 inline-block mr-1"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    Luton, United Kingdom
+                                </small>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
-          </li>
-        </ul>
-      </div>
-    </main>
-    <Footer />
-  </body>
+            <hr
+                class="mt-[clamp(2rem,5vw,4rem)] mb-[clamp(2rem,5vw,4rem)] border-gray-300"
+            />
+            <div class="flex flex-col sm:flex-row gap-4">
+                <div
+                    sm:mb-0
+                    class="m:flex sm:flex-col sm:justify-between sm:flex-[1] sm:max-w-[400px] sm:basis-[80px] sm:shrink-0"
+                >
+                    <h3
+                        class="underline sm:no-underline flex-shrink-0 mr-8 text-xl mb-10 sm:mb-0"
+                    >
+                        Developing for
+                    </h3>
+                </div>
+                <ul class="sm:flex-[3] max-w-xl">
+                    <Project
+                        icon="/images/ocado-logo.png"
+                        name="Ocado"
+                        location="Hatfield, United Kingdom"
+                        description="The UKs largest pure-play online grocer, known for its cutting-edge automation and delivery from high-tech fulfilment centres."
+                    />
+                    <Project
+                        icon="/images/ocado-logo.png"
+                        name="ICA Gruppen"
+                        location="Solna, Sweden"
+                        description="One of Sweden’s largest retail companies, operating thousands of grocery stores and pharmacies, uniquely combining local ownership with national scale."
+                    />
+                    <Project
+                        icon="https://placehold.co/60x60"
+                        name="Telenor"
+                        location="Fornebu, Norway"
+                        description="Norway’s largest telecom provider, operating across the Nordics and Asia, and uniquely known for its global reach combined with strong local trust."
+                    />
+                    <Project
+                        icon="https://placehold.co/60x60"
+                        name="Morrisons"
+                        location="Bradford, United Kingdom"
+                        description="One of the UK’s biggest supermarket chains, owning much of its food supply chain—from farm to shelf."
+                    />
+                    <Project
+                        icon="https://placehold.co/60x60"
+                        name="Marie Claire"
+                        location="London, United Kingdom"
+                        description="Marie Claire is a globally recognized fashion and lifestyle brand, uniquely blending Parisian elegance with empowering content across media and retail."
+                    />
+                    <Project
+                        icon="https://placehold.co/60x60"
+                        name="Lotte"
+                        location="Seoul, South Korea"
+                        description="One of South Korea’s largest conglomerates, spanning retail, food, and entertainment, and is uniquely known for blending consumer lifestyle brands with sprawling urban developments."
+                    />
+                    <Project
+                        icon="https://placehold.co/60x60"
+                        name="Auchan Polska"
+                        location="Warsaw, Poland"
+                        description="Auchan Polska is a major hypermarket chain in Poland, offering wide-format retail with a French touch and a strong focus on price and private-label value."
+                    />
+                    <Project
+                        icon="https://placehold.co/60x60"
+                        name="Groupe Casino"
+                        location="Saint-Étienne, France"
+                        description="Major French retail group, operating diverse supermarket brands and pioneering data-driven retail through its tech-driven subsidiary, Cdiscount."
+                    />
+                    <Project
+                        icon="https://placehold.co/60x60"
+                        name="Sobeys"
+                        location="Stellarton, Canada"
+                        description="One of Canada’s largest food retailers, known for its coast-to-coast presence and unique family-owned heritage within the Empire Company group."
+                    />
+                    <Project
+                        icon="https://placehold.co/60x60"
+                        name="Bon Preu"
+                        location="Barcelona, Spain"
+                        description="A leading Catalan supermarket chain in Spain, uniquely focused on local products and sustainability across its growing network of stores."
+                    />
+                    <Project
+                        icon="https://placehold.co/60x60"
+                        name="Alcampo"
+                        location="Madrid, Spain"
+                        description="One of Spain’s major hypermarket chains, combining large-format retail with a strong commitment to affordable quality and French-rooted ownership through Auchan."
+                    />
+                    <Project
+                        icon="https://placehold.co/60x60"
+                        name="Aeon"
+                        location="Chiba, Japan"
+                        description="Japan’s largest retail group, operating thousands of stores and uniquely integrating shopping, finance, and community services under one corporate umbrella."
+                    />
+                    <Project
+                        icon="https://placehold.co/60x60"
+                        name="Panda Retail Company"
+                        location="Jeddah, Saudi Arabia"
+                        description="One of Saudi Arabia’s largest grocery chains, uniquely blending modern retail formats with deep local market reach across the Kingdom."
+                    />
+                </ul>
+            </div>
+            <hr
+                class="mt-[clamp(2rem,5vw,4rem)] mb-[clamp(2rem,5vw,4rem)] border-gray-300"
+            />
+            <div class="flex flex-col sm:flex-row gap-4">
+                <div
+                    class="sm:flex sm:flex-col sm:justify-between sm:flex-[1] sm:max-w-[400px] sm:basis-[80px] sm:shrink-0"
+                >
+                    <h3
+                        class="underline sm:no-underline flex-shrink-0 mr-8 text-xl mb-10 sm:mb-0"
+                    >
+                        Around the web
+                    </h3>
+                </div>
+                <ul class="sm:flex-[3] max-w-xl">
+                    <li class="mb-2">
+                        <div>
+                            <div>
+                                <a
+                                    class="flex items-center"
+                                    href="https://github.com/danhoran"
+                                    target="_blank"
+                                >
+                                    <h4 class="text-lg">Github</h4>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 16 16"
+                                        fill="currentColor"
+                                        class="w-4 h-4 inline-block ml-1"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M8.914 6.025a.75.75 0 0 1 1.06 0 3.5 3.5 0 0 1 0 4.95l-2 2a3.5 3.5 0 0 1-5.396-4.402.75.75 0 0 1 1.251.827 2 2 0 0 0 3.085 2.514l2-2a2 2 0 0 0 0-2.828.75.75 0 0 1 0-1.06Z"
+                                            clip-rule="evenodd"></path>
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M7.086 9.975a.75.75 0 0 1-1.06 0 3.5 3.5 0 0 1 0-4.95l2-2a3.5 3.5 0 0 1 5.396 4.402.75.75 0 0 1-1.251-.827 2 2 0 0 0-3.085-2.514l-2 2a2 2 0 0 0 0 2.828.75.75 0 0 1 0 1.06Z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="mb-2">
+                        <div>
+                            <div>
+                                <a
+                                    class="flex items-center"
+                                    href="https://www.linkedin.com/in/dan-horan/"
+                                    target="_blank"
+                                >
+                                    <h4 class="text-lg">LinkedIn</h4>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 16 16"
+                                        fill="currentColor"
+                                        class="w-4 h-4 inline-block ml-1"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M8.914 6.025a.75.75 0 0 1 1.06 0 3.5 3.5 0 0 1 0 4.95l-2 2a3.5 3.5 0 0 1-5.396-4.402.75.75 0 0 1 1.251.827 2 2 0 0 0 3.085 2.514l2-2a2 2 0 0 0 0-2.828.75.75 0 0 1 0-1.06Z"
+                                            clip-rule="evenodd"></path>
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M7.086 9.975a.75.75 0 0 1-1.06 0 3.5 3.5 0 0 1 0-4.95l2-2a3.5 3.5 0 0 1 5.396 4.402.75.75 0 0 1-1.251-.827 2 2 0 0 0-3.085-2.514l-2 2a2 2 0 0 0 0 2.828.75.75 0 0 1 0 1.06Z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="mb-2">
+                        <div>
+                            <div>
+                                <a
+                                    class="flex items-center"
+                                    href="https://medium.com/@danhoran"
+                                    target="_blank"
+                                >
+                                    <h4 class="text-lg">Medium</h4>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 16 16"
+                                        fill="currentColor"
+                                        class="w-4 h-4 inline-block ml-1"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M8.914 6.025a.75.75 0 0 1 1.06 0 3.5 3.5 0 0 1 0 4.95l-2 2a3.5 3.5 0 0 1-5.396-4.402.75.75 0 0 1 1.251.827 2 2 0 0 0 3.085 2.514l2-2a2 2 0 0 0 0-2.828.75.75 0 0 1 0-1.06Z"
+                                            clip-rule="evenodd"></path>
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M7.086 9.975a.75.75 0 0 1-1.06 0 3.5 3.5 0 0 1 0-4.95l2-2a3.5 3.5 0 0 1 5.396 4.402.75.75 0 0 1-1.251-.827 2 2 0 0 0-3.085-2.514l-2 2a2 2 0 0 0 0 2.828.75.75 0 0 1 0 1.06Z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+        <Footer />
+    </body>
 </html>
