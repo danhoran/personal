@@ -4,7 +4,7 @@ description: 'A solution for easier access to more models'
 pubDate: 'Jul 30 2025'
 duration: '5 minute read'
 location: 'Trondheim'
-tags: ['software engineering', 'ai']
+tags: ['ai']
 ---
 
 The recent controversy surrounding AI pricing models and usage limits for both Cursor and Anthropic's Claude inspired me to think about the way I want to interact with these services. As a consumer, navigating the landscape of what's on offer is a nightmare.
@@ -61,7 +61,7 @@ OpenRouter aggregates models and provides access via a single API. It also provi
 
 ### MindMac
 
-[MindMac](https://mindmac.app/) offers a unified interface for interacting with models and organising conversations. Crucially, it integrates with OpenRouter allowing me to quickly switch models for each conversation (even within conversations) in order to the most appropriate model.
+[MindMac](https://mindmac.app/) offers a unified interface for interacting with models and organising conversations. Crucially, it integrates with OpenRouter allowing me to quickly switch models for each conversation (even within conversations) in order to use the most appropriate model.
 
 ### Kilo Code & Cline
 
