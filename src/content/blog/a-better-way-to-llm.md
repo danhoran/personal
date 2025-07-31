@@ -47,9 +47,7 @@ I want the ability to group chats by project or topic, to be able to provide cus
 
 ---
 
-## My solution: The pay-as-you-go model
-
-Note: I'm still experimenting with the cost-effectiness of this approach.
+## The pay-as-you-go model
 
 I'll break it down into a few parts:
 
@@ -67,8 +65,6 @@ OpenRouter aggregates models and provides access via a single API. It also provi
 
 VSCode is my IDE of choice. I've spent too long customising it to consider switching now. Whilst a terinal client would work, I've also explored integrated extensions that work with OpenRouter. The two winners right now are [Cline](https://cline.bot/) and [Kilo Code](https://kilocode.ai/). I'm not married to either of these yet and this is a vibrant space with challengers appearing all the time.
 
-### The fallback
+### Wrapping up
 
 This approach ticks most of the boxes for me but there are a couple of downsides: 1. Cost effectiveness is a an open question: I need to experiment with my usage to determine whether this approach is going to be cost-effective in the long-run. 2. App availability: MacMind does not offer a mobile app. This means I will still need to manage my conversations in two separate places (desktop and mobile). It's not ideal but also not a deal breaker.
-
-If cost turns out to be prohibitive there are alternatives such as [T3.Chat](https://t3.chat/) that I will explore. This won't tick all of the boxes on my wishlist but it will be a reasonable option.
