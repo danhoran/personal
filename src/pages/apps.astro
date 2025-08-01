@@ -1,0 +1,39 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Introduction from '../components/Introduction.astro';
+import Role from '../components/Role.astro';
+import Project from '../components/Project.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import '../styles/global.css';
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <BaseHead
+            title={SITE_TITLE + ' - Apps'}
+            description={SITE_DESCRIPTION}
+        />
+    </head>
+    <body class="flex flex-col min-h-screen">
+        <Header />
+        <main class="font-sans mx-5 md:mx-15 my-20 mt-auto">
+            <div class="flex flex-col sm:flex-row gap-4 mt-20">
+                <div
+                    class="sm:flex sm:flex-col sm:justify-between sm:flex-[1] sm:max-w-[400px] sm:basis-[80px] sm:shrink-0"
+                >
+                    <h1 class="hidden sm:block text-xl">Apps</h1>
+                </div>
+                <div class="sm:flex-[3] max-w-xl">
+                    <h2 class="text-2xl mb-8">Hand-made. Quality.</h2>
+                    <p class="text-lg text-gray-500 mb-8">
+                        Completely free, always.
+                    </p>
+                </div>
+            </div>
+        </main>
+        <Footer />
+    </body>
+</html>

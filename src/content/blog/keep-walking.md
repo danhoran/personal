@@ -1,14 +1,15 @@
 ---
-title: 'The importance of perceived performance'
+title: 'Keep walking'
 description: 'Sometimes performance is simply about moving forward'
 pubDate: 'Jul 28 2025'
 duration: '4 minute read'
 location: 'Trondheim'
 tags: ['software engineering', 'performance']
 ---
+
 Sometimes improving performance is simply about keeping the user moving forward, not making it faster.
 
-11 years ago I attended a [DotJS](https://www.dotjs.io/) conference in Paris. It was a long, sleep-deprived, trip on the Eurostar from London to Paris. I was there and back in less than 24 hours. 
+11 years ago I attended a [DotJS](https://www.dotjs.io/) conference in Paris. It was a long, sleep-deprived, trip on the Eurostar from London to Paris. I was there and back in less than 24 hours.
 
 During the conference Guillermo Rauch, creator of [Socket.io](https://socket.io/), [Mongoose](https://mongoosejs.com/), and CEO of [Vercel](https://vercel.com/), gave an 18-minute talk titled ["The need for speed"](https://www.youtube.com/watch?v=Ar9R-CX217o). And it changed how I think about software performance to this day.
 

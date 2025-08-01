@@ -1,52 +1,62 @@
 ---
-import HeaderLink from "./HeaderLink.astro";
-import { SITE_TITLE, HEADER_TITLE } from "../consts";
+import HeaderLink from './HeaderLink.astro';
+import { SITE_TITLE, HEADER_TITLE } from '../consts';
 ---
 
 <header class="mx-5 md:mx-15 my-5">
-  <nav class="flex">
-    <h2 class="font-semibold text-md">
-      <a href="/">{HEADER_TITLE}.</a>
-    </h2>
-    <div
-      class="ml-auto flex flex-col sm:flex-row gap-2 sm:gap-6 sm:items-center items-end"
-    >
-      <HeaderLink
-        href="/"
-        class="text-gray-700 h-9 text-lg hover:text-blue-600 transition-colors px-2 py-1 rounded-md flex items-center gap-2"
-        ><svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="w-5 h-5 hidden sm:inline"
+    <nav class="flex">
+        <h2 class="font-semibold text-md">
+            <a href="/">{HEADER_TITLE}.</a>
+        </h2>
+        <div
+            class="ml-auto flex flex-col sm:flex-row gap-2 sm:gap-6 sm:items-center items-end"
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M3 9.75L12 3l9 6.75M4.5 10.5v9.75A.75.75 0 005.25 21h4.5a.75.75 0 00.75-.75V15a.75.75 0 01.75-.75h2.25A.75.75 0 0114.25 15v5.25c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75V10.5"
-          ></path>
-        </svg>
-        <span class="sm:hidden">Home</span>
-      </HeaderLink>
-      <HeaderLink
-        href="/about"
-        class="text-gray-700 text-lg hover:text-blue-600 transition-colors px-2 py-1 rounded-md"
-        >About</HeaderLink
-      >
-      <HeaderLink
-        href="/blog"
-        class="text-gray-700 text-lg hover:text-blue-600 transition-colors px-2 py-1 rounded-md"
-        >Blog</HeaderLink
-      >
-      <!--
+            <HeaderLink
+                href="/"
+                class="text-gray-700 h-9 text-lg hover:text-blue-600 transition-colors px-2 py-1 rounded-md flex items-center gap-2"
+                ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-5 h-5 hidden sm:inline"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M3 9.75L12 3l9 6.75M4.5 10.5v9.75A.75.75 0 005.25 21h4.5a.75.75 0 00.75-.75V15a.75.75 0 01.75-.75h2.25A.75.75 0 0114.25 15v5.25c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75V10.5"
+                    ></path>
+                </svg>
+                <span class="sm:hidden">Home</span>
+            </HeaderLink>
+            <HeaderLink
+                href="/about"
+                class="text-gray-700 text-lg hover:text-blue-600 transition-colors px-2 py-1 rounded-md"
+                >About</HeaderLink
+            >
+            <!--
+            <HeaderLink
+                href="/apps"
+                class="text-gray-700 text-lg hover:text-blue-600 transition-colors px-2 py-1 rounded-md"
+                >Apps</HeaderLink
+            >-->
+            <HeaderLink
+                href="/blog"
+                class="text-gray-700 text-lg hover:text-blue-600 transition-colors px-2 py-1 rounded-md"
+                >Blog</HeaderLink
+            >
+            <!--
       <HeaderLink
         href="/tags"
         class="text-gray-700 text-lg hover:text-blue-600 transition-colors px-2 py-1 rounded-md"
         >Tags</HeaderLink
       >
-        
+
     </div>
   </nav>
+</header>
+-->
+        </div>
+    </nav>
 </header>
