@@ -39,7 +39,7 @@ I want the ability to use ChatGPT to proof-read my blog post drafts, Claude 3.5 
 
 ### 3. Easy access to inexpensive models
 
-I often find myself having rapid, unimportant, and inconsequential conversations with my LLM of choice. Using Perplexity Pro to understand popularity of Python modules feels unnecessory. I want the ability to switch to an inexpensive model for those throwaway conversations.
+I often find myself having rapid, unimportant, and inconsequential conversations with my LLM of choice. I want the ability to switch to an inexpensive model for those throwaway conversations.
 
 ### 4. Consistent app feature set
 
